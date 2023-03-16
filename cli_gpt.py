@@ -13,7 +13,7 @@ def hello(name):
 @cli.command()
 @click.option('-t','--text' , type=str, help='Use this option to ask your question', default='How are you ?')
 def tellme(text):     
-    click.echo("--------------------THINKING------------------------------")
+    click.echo("------------------------THINKING--------------------------")
     click.echo("----------------------------------------------------------")
     click.echo(index(text))
     click.echo("----------------------------------------------------------")
