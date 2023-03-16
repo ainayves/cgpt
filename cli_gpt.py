@@ -17,7 +17,7 @@ def tellme():
 
     while len(resp) > 0:
 
-        client = input("Dîtes quelques chose (q to quit) >")
+        client = input("Dîtes quelques chose (q to quit) > ")
 
         if client == "q":
             break
@@ -27,6 +27,7 @@ def tellme():
         
         click.echo("----------------------------------------------------------")
         click.echo(f"<< 🤖 >> {resp}")
+        click.echo("\n")
         click.echo("----------------------------------------------------------")
         
 
