@@ -7,7 +7,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read()
     
 setup(
-    name = 'cli-gpt',
+    name = 'cgpt',
     version = '0.0.1',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
@@ -24,6 +24,6 @@ setup(
     ],
     entry_points = '''
         [console_scripts]
-        cgpt=cli_gpt:cli
+        cgpt=cgpt:cli
     '''
 )
