@@ -2,3 +2,5 @@ wheel
 setuptools
 twine
 click>=7.1.2
+openai
+python-dotenv
