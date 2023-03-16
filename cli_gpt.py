@@ -11,11 +11,27 @@ def hello(name):
     click.echo(f'Hello {name}')
 
 @cli.command()
-@click.option('-t','--text' , type=str, help='Use this option to ask your question', default='How are you ?')
-def tellme(text):     
-    click.echo("------------------------THINKING--------------------------")
-    click.echo("----------------------------------------------------------")
-    click.echo(index(text))
-    click.echo("----------------------------------------------------------")
-    click.echo("----------------------------------------------------------")
+def tellme():
+
+    resp = "begin"
+
+    while len(resp) > 0:
+
+        client = input("Dîtes quelques chose (q to quit) >")
+
+        if client == "q":
+            break
+
+        resp = index(client)
+
+        
+        click.echo("----------------------------------------------------------")
+        click.echo(f"<< 🤖 >> {resp}")
+        click.echo("----------------------------------------------------------")
+        
+
+
+        
+
+         
 

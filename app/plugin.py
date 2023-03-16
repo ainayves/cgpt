@@ -19,4 +19,4 @@ def davinci(what):
     res = response["choices"][0]["text"]
     
 
-    return f"🤖 << CLI-GPT >> {res}"
+    return res
