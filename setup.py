@@ -26,6 +26,6 @@ setup(
     ],
     entry_points = '''
         [console_scripts]
-        cooltool=cli_gpt:cli
+        cgpt=cli_gpt:cli
     '''
 )
