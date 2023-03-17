@@ -1,5 +1,5 @@
 import click
-from main import index
+from .main import index
 
 @click.group()
 def cli():
