@@ -13,7 +13,7 @@ setup(
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
     description = 'Use openai chat-gpt on your cli',
-    long_description=long_desc,
+    long_description='cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal. \n\n 🔨 REQUIREMENTS \n python >=3.7 \n\n 🚀 RUN test version \n $ cgpt tellme',
     url = 'https://github.com/Aina15-DT/cli-gpt>',
     py_modules = ['cli_gpt', 'app'],
     packages = find_packages(),
