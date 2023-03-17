@@ -1,5 +1,5 @@
 import click
-from cgpt.main import index
+from app.main import index
 
 @click.group()
 def cli():
