@@ -17,7 +17,7 @@ def tellme():
 
     while len(resp) > 0:
 
-        client = input("Dîtes quelques chose (q to quit) > ")
+        client = input("Dîtes quelque chose (q to quit) > ")
 
         if client == "q":
             break
