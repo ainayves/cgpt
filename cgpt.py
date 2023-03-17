@@ -1,5 +1,7 @@
 import click
 from app.main import index
+import dotenv
+import getpass
 
 @click.group()
 def cli():
@@ -12,23 +14,33 @@ def hello(name):
 
 @cli.command()
 def tellme():
+    
+    api_key = getpass.getpass(" Ajouter votre api key > ")
+    fichier = open(".env", "w")
+    fichier.close()
 
-    resp = "begin"
+    dotenv.set_key(".env", "OPENAI_API_KEY", api_key)
+    
+    
+    if api_key :
+        resp = "begin"
 
-    while len(resp) > 0:
+        while len(resp) > 0:
 
-        client = input("Dîtes quelque chose (q to quit) > ")
+            client = input(" Dîtes quelque chose (q to quit) > ")
 
-        if client == "q":
-            break
+            if client == "q":
+                break
 
-        resp = index(client)
+            resp = index(client)
 
-        
-        click.echo("----------------------------------------------------------")
-        click.echo(f"<< 🤖 >> {resp}")
-        click.echo("\n")
-        click.echo("----------------------------------------------------------")
+            
+            click.echo("----------------------------------------------------------")
+            click.echo(f"<< 🤖 >> {resp}")
+            click.echo("\n")
+            click.echo("----------------------------------------------------------")
+    else:
+        click.echo("vous n' avez pas ajouter un key")
         
 
 
