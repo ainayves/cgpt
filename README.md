@@ -25,9 +25,11 @@ cgpt tellme
 
 ```
 
-### ⏩ Coming soon
-Setup + add your api key just once
-
-### Feedback
+### 💚 Feedback
 
 Please feel free to leave feedback in issues/PRs.
+
+### 🟧 To be fixed :
+
+- add your api key just once
+- show entire response , and code
