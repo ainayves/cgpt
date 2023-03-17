@@ -1,4 +1,4 @@
-from .plugin import davinci
+from cgpt.plugin import davinci
 
 def index(text_input):
     return davinci(text_input)
