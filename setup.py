@@ -15,10 +15,10 @@ setup(
     description = 'Use openai chat-gpt on your cli',
     long_description='cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal. \n\n 🔨 REQUIREMENTS \n python >=3.7 \n\n 🚀 RUN test version \n $ cgpt tellme',
     url = 'https://github.com/Aina15-DT/cli-gpt>',
-    py_modules = ['app'],
+    py_modules = ['cgpt'],
     include_package_data=True,
     packages = find_packages(
-        where='app',
+        where='cgpt',
     ),
     install_requires = ['setuptools',
                         'twine',
