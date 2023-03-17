@@ -17,7 +17,7 @@ setup(
     url = 'https://github.com/Aina15-DT/cli-gpt>',
     py_modules = ['cli_gpt', 'app'],
     packages = find_packages(),
-    install_requires = ['setuptools'
+    install_requires = ['setuptools',
                         'twine',
                         'click>=7.1.2',
                         'openai',
