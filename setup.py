@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r", encoding="utf-8") as fh:
+with open("pypi_desc.md", "r", encoding="utf-8") as fh:
     long_desc = fh.read()
     
 with open("requirements.txt", "r", encoding="utf-8") as fh:
@@ -8,13 +8,14 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '0.0.18',
+    version = '0.0.19',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
     description = 'Use openai chat-gpt on your cli',
-    long_description='cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal. \n\n 🔨 REQUIREMENTS \n python >=3.7 \n\n 🚀 RUN test version \n $ cgpt tellme',
+    long_description=long_desc,
     url = 'https://github.com/Aina15-DT/cli-gpt>',
+    long_description_content_type='text/markdown',
     py_modules = ['cgpt','app'],
     packages = find_packages(),
     install_requires = ['setuptools',

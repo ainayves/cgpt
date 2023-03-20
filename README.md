@@ -6,15 +6,14 @@ cgpt is a Python module that allows you to use Chat-GPT directly in your Termina
 ### ❓ REQUIREMENTS
 
 - python >=3.7
-- openai API KEY
+- openai API KEY : 
+You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
 ### 💻 SETUP
 
 ```
 pip install -r requirements.txt
 ```
-
-- You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
 ### 🔨 BUILD
 
