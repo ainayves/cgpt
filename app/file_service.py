@@ -2,7 +2,7 @@ import click , os , getpass ,dotenv
 
 def file_prompt() -> None:
     
-    api_key = getpass.getpass(" Ajouter votre api key > ")
+    api_key = getpass.getpass(" Ajoutez votre api key (invisible input) > ")
     
     if api_key :
 

@@ -12,7 +12,7 @@ def davinci(what : str) -> Union[str, None]:
     try:
         response = openai.Completion.create(
         model="text-davinci-003",
-        prompt=f"The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nHuman:{what}",
+        prompt=f"The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:{what}",
         temperature=0.9,
         max_tokens=150,
         top_p=1.0,
@@ -21,7 +21,7 @@ def davinci(what : str) -> Union[str, None]:
         stop=[" Human:", " AI:"]
         )
         
-        res = response["choices"][0]["text"].replace("AI Assistant:","")
+        res = response["choices"][0]["text"].replace("AI:","")
 
     
     except openai.error.AuthenticationError:

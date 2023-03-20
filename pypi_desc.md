@@ -13,7 +13,7 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 ### SETUP
 
 ```
-pip install -i https://test.pypi.org/simple/ cgpt==0.0.18
+pip install -i https://test.pypi.org/simple/ cgpt==0.0.X
 ```
 
 ### 🚀 RUN
@@ -21,7 +21,3 @@ pip install -i https://test.pypi.org/simple/ cgpt==0.0.18
 ```
 cgpt tellme
 ```
-
-### Developpment version on Github 
-
-[Aina15-DT/cgpt](https://github.com/Aina15-DT/cli-gpt)
