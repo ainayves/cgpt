@@ -1,7 +1,6 @@
-import click
-from app.main import index
-import dotenv
-import getpass
+import click , os
+from app.main import prompt
+from app.file_service import file_prompt
 
 @click.group()
 def cli():
@@ -15,32 +14,12 @@ def hello(name):
 @cli.command()
 def tellme():
     
-    api_key = getpass.getpass(" Ajouter votre api key > ")
-    fichier = open(".env", "w")
-    fichier.close()
+    if not os.path.isfile(".env"): 
 
-    dotenv.set_key(".env", "OPENAI_API_KEY", api_key)
-    
-    
-    if api_key :
-        resp = "begin"
-
-        while len(resp) > 0:
-
-            client = input(" Dîtes quelque chose (q to quit) > ")
-
-            if client == "q":
-                break
-
-            resp = index(client)
-
-            
-            click.echo("----------------------------------------------------------")
-            click.echo(f"<< 🤖 >> {resp}")
-            click.echo("\n")
-            click.echo("----------------------------------------------------------")
+        file_prompt()
     else:
-        click.echo("vous n' avez pas ajouter un key")
+
+        prompt()
         
 
 
