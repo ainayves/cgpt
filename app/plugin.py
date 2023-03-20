@@ -14,7 +14,7 @@ def davinci(what : str) -> Union[str, None]:
         model="text-davinci-003",
         prompt=f"The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:{what}",
         temperature=0.9,
-        max_tokens=150,
+        max_tokens=200,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.6,
