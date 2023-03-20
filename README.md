@@ -3,32 +3,37 @@
 ## Use openai chat-gpt on your cli
 cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal.
 
-### 🔨 REQUIREMENTS
+### ❓ REQUIREMENTS
 
 - python >=3.7
 - openai API KEY
 
 ### 💻 SETUP
 
-```
-pip install -r requirements.txt
-
+```pip install -r requirements.txt
 ```
 
 - You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
+### 🔨 BUILD
+
+Create a build.sh file , copy - paste the content of build.sh.example 
+
+If you are on Linux , launch:
+
+```sudo chmod +x build.sh
+```
+Then , :
+
+```./build.sh
+```
+
 
 ### 🚀 RUN
 
-```
-cgpt tellme
-
+```cgpt tellme
 ```
 
 ### 💚 Feedback
 
 Please feel free to leave feedback in issues/PRs.
-
-### 🟧 To be fixed :
-
-- show entire response , and code
