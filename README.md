@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 
 - You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
-- Then, create copy of .env_example, name it .env  and put the api key there
+
 
 ### 🚀 RUN test version
 
@@ -31,5 +31,4 @@ Please feel free to leave feedback in issues/PRs.
 
 ### 🟧 To be fixed :
 
-- add your api key just once
 - show entire response , and code
