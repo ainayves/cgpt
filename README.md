@@ -10,7 +10,8 @@ cgpt is a Python module that allows you to use Chat-GPT directly in your Termina
 
 ### 💻 SETUP
 
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
 ```
 
 - You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
@@ -21,17 +22,20 @@ Create a build.sh file , copy - paste the content of build.sh.example
 
 If you are on Linux , launch:
 
-```sudo chmod +x build.sh
+```
+sudo chmod +x build.sh
 ```
 Then , :
 
-```./build.sh
+```
+./build.sh
 ```
 
 
 ### 🚀 RUN
 
-```cgpt tellme
+```
+cgpt tellme
 ```
 
 ### 💚 Feedback
