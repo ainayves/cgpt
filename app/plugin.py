@@ -22,7 +22,6 @@ def davinci(what : str) -> Union[str, None]:
         
         res = response["choices"][0]["text"]
 
-        return res
     
     except openai.error.AuthenticationError:
 
@@ -31,11 +30,11 @@ def davinci(what : str) -> Union[str, None]:
         if modify_apikey == "m" :
 
             file_prompt()
-            click.echo("API KEY modifié avec succès")
-        
+            res = None
+            
         else:
 
-            click.echo("Votre API KEY nécessite d' être modifier")
+            res = None
             
 
-        return None
+    return res
