@@ -1,0 +1,1 @@
+SERVER_PATH = "app/server/main.py"
