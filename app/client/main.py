@@ -5,10 +5,10 @@ def Main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    click.echo(f"--> Connexion à {adresse_ip}:{port}")
+    click.echo(f"Connexion sur {adresse_ip}:{port}")
     try:
         s.connect((adresse_ip,port))
-        click.echo(f"---> Connecté à {adresse_ip}:{port}")
+        click.echo(f"Connecté sur {adresse_ip}:{port}")
         while True:
             
             if not os.path.isfile(".env"): 
