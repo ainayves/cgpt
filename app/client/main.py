@@ -5,10 +5,10 @@ def Main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    click.echo(f"Conexion à {adresse_ip}:{port}")
+    click.echo(f"--> Connexion à {adresse_ip}:{port}")
     try:
         s.connect((adresse_ip,port))
-        click.echo(f"Connecté à {adresse_ip}:{port}")
+        click.echo(f"---> Connecté à {adresse_ip}:{port}")
         while True:
             
             if not os.path.isfile(".env"): 
@@ -18,7 +18,6 @@ def Main():
             client = input(" Dîtes quelque chose (q : quitter , m : modifier api_key ) > ")
 
             if client == "q":
-                
                 
                 break
             
@@ -37,7 +36,7 @@ def Main():
             click.echo("----------------------------------------------------------")
    
     except BrokenPipeError:
-        print("Connection lost")
+        print("Connexion perdu")
 
     finally:
         # close the connection
