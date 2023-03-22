@@ -1,7 +1,7 @@
 import click , os , subprocess
 from app.main import prompt
 from app.file_service import file_prompt
-from utils.constant import SERVER_PATH , CLIENT_PATH
+from app.utils.constant import SERVER_PATH , CLIENT_PATH
 
 
 @click.group()

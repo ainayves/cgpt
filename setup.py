@@ -17,7 +17,7 @@ setup(
     url = 'https://github.com/Aina15-DT/cli-gpt>',
     long_description_content_type='text/markdown',
     py_modules = ['cgpt','app'],
-    packages = ['app', 'app.client', 'app.server'],
+    packages = ['app', 'app.client', 'app.server' , 'app.utils'],
     install_requires = ['setuptools',
                         'twine',
                         'click>=7.1.2',
