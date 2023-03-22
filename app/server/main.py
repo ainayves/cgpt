@@ -17,9 +17,6 @@ def threaded(c):
         except BrokenPipeError:
             continue
 
-    
-        
-
 def main():
    
     server_socket = socket.create_server(("localhost", 2048), reuse_port=False)
