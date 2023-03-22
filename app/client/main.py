@@ -2,14 +2,13 @@ import socket, click , os
 from app.file_service import file_prompt
  
 def Main():
-
-    host = '127.0.0.1'
+    adresse_ip = socket.gethostbyname(socket.gethostname())
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
     try:
-        s.connect((host,port))
-
+        s.connect((adresse_ip,port))
+        click.echo(f"Connecté à {adresse_ip}:{port}")
         while True:
             
             if not os.path.isfile(".env"): 
