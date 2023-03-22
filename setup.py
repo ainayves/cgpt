@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '0.1.21',
+    version = '0.1.22',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
@@ -17,7 +17,7 @@ setup(
     url = 'https://github.com/Aina15-DT/cli-gpt>',
     long_description_content_type='text/markdown',
     py_modules = ['cgpt','app'],
-    packages = find_packages(),
+    packages = ['app', 'app.client', 'app.server'],
     install_requires = ['setuptools',
                         'twine',
                         'click>=7.1.2',
