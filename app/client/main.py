@@ -5,7 +5,7 @@ def Main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-
+    click.echo(f"Conexion à {adresse_ip}:{port}")
     try:
         s.connect((adresse_ip,port))
         click.echo(f"Connecté à {adresse_ip}:{port}")
