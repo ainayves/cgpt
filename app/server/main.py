@@ -1,12 +1,24 @@
-import socket
+import socket, click
 from _thread import *
 import threading
 print_lock = threading.Lock()
+from app.main import index
 
 def threaded(c):
     
     while True:
-        pass
+        
+        client_data = c.recv(1024).decode()
+
+        try:
+            
+            c.send(index(client_data).encode(encoding="UTF-8"))
+        
+        except BrokenPipeError:
+            continue
+
+    
+        
 
 def main():
    

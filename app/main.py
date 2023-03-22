@@ -8,7 +8,7 @@ def index(text_input : str) -> str:
 
 def prompt() -> None:
     resp = "begin"
-
+    
     while len(resp) > 0:
 
         client = input(" Dîtes quelque chose (q : quitter , m : modifier api_key ) > ")

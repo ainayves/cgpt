@@ -1,7 +1,7 @@
 import click , os , subprocess
 from app.main import prompt
 from app.file_service import file_prompt
-from utils.constant import SERVER_PATH
+from utils.constant import SERVER_PATH , CLIENT_PATH
 
 
 @click.group()
@@ -16,10 +16,19 @@ def hello(name):
 @cli.command()
 def tellme():
     
+    
     use_in_lan = click.confirm("Est ce que voulez vous utiliser cgpt en réseaux ? ")
-    script_path = SERVER_PATH
+    
     if use_in_lan:
-        subprocess.run(['python', script_path])
+
+        endpoint = click.confirm("Êtes vous le serveur 😃 ?  ")
+
+        if endpoint:
+            click.echo("Veuillez ouvrir un autre terminal..😌")
+            subprocess.run(['python', SERVER_PATH])
+        
+        else:
+            subprocess.run(['python', CLIENT_PATH])
 
     else : 
 
