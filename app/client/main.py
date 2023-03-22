@@ -32,7 +32,7 @@ def Main():
             resp = str(data.decode('ascii'))
 
             click.echo("----------------------------------------------------------")
-            click.echo(f"<< 🤖 >> {resp}")
+            click.echo(f"<< IA >> {resp}")
             click.echo("\n")
             click.echo("----------------------------------------------------------")
    

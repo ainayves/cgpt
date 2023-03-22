@@ -10,7 +10,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '0.1.29',
+    version = '0.1.30',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',

@@ -23,7 +23,7 @@ def main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     server_socket = socket.create_server((adresse_ip, 2048), reuse_port=False)
     server_socket.listen()
-    click.echo(f"Serveur live sur {adresse_ip}:2048 ..🥳")
+    click.echo(f"Serveur live sur {adresse_ip}:2048 ..")
     while True:
         client, _ = server_socket.accept()
         threading.Thread(target=threaded,args=(client,), daemon=True).start()
