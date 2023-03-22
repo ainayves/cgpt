@@ -5,10 +5,8 @@ def Main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-    print(f"Connexion sur {adresse_ip}:{port}")
     try:
         s.connect((adresse_ip,port))
-        print(f"Connecté sur {adresse_ip}:{port}")
         while True:
             
             if not os.path.isfile(".env"): 
