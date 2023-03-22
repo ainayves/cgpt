@@ -16,7 +16,7 @@ def hello(name):
 @cli.command()
 def tellme():
     
-    
+    cgpt_path = os.path.abspath(os.path.dirname(__file__))   
     use_in_lan = click.confirm("Est ce que voulez vous utiliser cgpt en réseaux ? ")
     
     if use_in_lan:
@@ -25,10 +25,10 @@ def tellme():
 
         if endpoint:
             click.echo("Veuillez ouvrir un autre terminal..😌")
-            subprocess.run(['python', SERVER_PATH])
+            subprocess.run(['python', cgpt_path+SERVER_PATH])
         
         else:
-            subprocess.run(['python', CLIENT_PATH])
+            subprocess.run(['python', cgpt_path+CLIENT_PATH])
 
     else : 
 
