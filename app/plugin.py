@@ -1,4 +1,6 @@
-import os, click
+# -*- coding: utf-8 -*-
+
+import os
 from typing import Union
 import openai
 from app.file_service import file_prompt

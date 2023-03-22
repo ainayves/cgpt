@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+
 import socket, click , os
 from app.file_service import file_prompt
+
  
 def Main():
     adresse_ip = socket.gethostbyname(socket.gethostname())

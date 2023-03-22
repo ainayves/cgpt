@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import socket, click
 from _thread import *
 import threading

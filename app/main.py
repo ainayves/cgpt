@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import click 
 from app.plugin import davinci
 from app.file_service import file_prompt
+
 
 def index(text_input : str) -> str:
     return davinci(text_input)

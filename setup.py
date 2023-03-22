@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import setup, find_packages
 
 with open("pypi_desc.md", "r", encoding="utf-8") as fh:
@@ -8,7 +10,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '0.1.28',
+    version = '0.1.29',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',

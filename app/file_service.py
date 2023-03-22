@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import click , os , getpass ,dotenv
 
 def file_prompt() -> None:

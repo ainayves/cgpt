@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import click , os , subprocess
 from app.main import prompt
 from app.file_service import file_prompt
