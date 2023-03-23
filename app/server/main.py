@@ -4,7 +4,7 @@ import socket, click
 from _thread import *
 import threading
 print_lock = threading.Lock()
-from app.main import index
+from app.plugin import davinci
 from app.utils.constant import PORT , SERVER_LIVE , UTF
 
 def threaded(c):
@@ -16,7 +16,7 @@ def threaded(c):
         try:
             
             if client_data is not None : 
-                c.send(index(client_data).encode(encoding=UTF))
+                c.send(davinci(client_data).encode(encoding=UTF))
             else : 
                 continue
         
