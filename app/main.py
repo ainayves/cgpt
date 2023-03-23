@@ -34,7 +34,7 @@ def prompt() -> None:
         if resp == None:
             break
         
-        click.echo(DASHED, color="green")
+        click.echo(DASHED, color=True)
         click.echo(f"<< {IA} >> {resp}")
         click.echo("\n")
-        click.echo(DASHED, color="green")
+        click.echo(DASHED, color=True)

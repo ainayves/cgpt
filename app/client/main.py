@@ -40,10 +40,10 @@ def Main():
             s.send(client.encode(UTF.lower()))
             data = s.recv(1024)
 
-            click.echo(DASHED, color="green")
+            click.echo(DASHED, color=True)
             click.echo(f"<< {IA} >> {str(data.decode(UTF.lower()))}")
             click.echo("\n")
-            click.echo(DASHED, color="green")
+            click.echo(DASHED, color=True)
    
     except BrokenPipeError:
         click.echo(CONNECTION_LOST)
