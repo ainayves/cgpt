@@ -22,11 +22,11 @@ def Main():
 
         s.connect((adresse_ip,port))
         while True:
-            
+            #############################
             if not os.path.isfile(".env"): 
 
                 file_prompt()
-
+            ##################################
             client = input(SAY_SOMETHING)
 
             if client == "q":    
@@ -36,10 +36,10 @@ def Main():
                 
                 file_prompt()
                 break
-
+            #################################################
             s.send(client.encode(UTF.lower()))
             data = s.recv(1024)
-
+            ###############################################
             click.echo(DASHED, color=True)
             click.echo(f"<< {IA} >> {str(data.decode(UTF.lower()))}")
             click.echo("\n")

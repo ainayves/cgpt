@@ -1,40 +1,53 @@
 # -*- coding: utf-8 -*-
 
-import click 
 from app.plugin import davinci
-from app.file_service import file_prompt
 from app.utils.constant import (
     SAY_SOMETHING,
     DASHED,
-    IA,
-    BEGIN
+    IA
 )
 
-def index(text_input : str) -> str:
+from app.base import Base_CGPT
+
+def index(self, text_input : str) -> str:
     return davinci(text_input)
 
 
 def prompt() -> None:
-    resp = BEGIN
     
-    while len(resp) > 0:
+    # while True:
 
-        client = input(SAY_SOMETHING)
+    #     client = input(SAY_SOMETHING)
 
-        if client == "q":
-            break
+    #     if client == "q":
+    #         break
         
-        elif client == "m":
+    #     elif client == "m":
             
-            file_prompt()
-            break
+    #         file_prompt()
+    #         break
 
-        resp = index(client)
+    #     resp = index(client)
 
-        if resp == None:
-            break
+    #     if resp == None:
+    #         break
         
-        click.echo(DASHED, color=True)
-        click.echo(f"<< {IA} >> {resp}")
-        click.echo("\n")
-        click.echo(DASHED, color=True)
+    #     click.echo(DASHED, color=True)
+    #     click.echo(f"<< {IA} >> {resp}")
+    #     click.echo("\n")
+    #     click.echo(DASHED, color=True)
+
+    Base_CGPT._anonym_func = index
+
+    cgpt = Base_CGPT(
+        exit_key="q",
+        modify_api_key="m",
+        input_text=SAY_SOMETHING,
+        decoration=DASHED,
+        icon_ans=IA
+
+    )
+
+    cgpt.infinite_loop()
+
+    
