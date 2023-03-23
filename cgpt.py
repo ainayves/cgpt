@@ -19,14 +19,14 @@ def hello(name):
 def tellme():
     
     cgpt_path = os.path.abspath(os.path.dirname(__file__))   
-    use_in_lan = click.confirm("Est ce que voulez vous utiliser cgpt en réseaux ? ")
+    use_in_lan = click.confirm("--> Est ce que voulez vous utiliser cgpt en réseaux ? ")
     
     if use_in_lan:
 
-        endpoint = click.confirm("Êtes vous le serveur 😃 ?  ")
+        endpoint = click.confirm("---> Êtes vous le serveur 😃 ?  ")
 
         if endpoint:
-            click.echo("Veuillez ouvrir un autre terminal..😌")
+            click.echo("----> Veuillez ouvrir un autre terminal..😌")
             subprocess.run(['python', cgpt_path+SERVER_PATH])
         
         else:
