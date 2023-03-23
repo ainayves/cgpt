@@ -2,11 +2,20 @@
 
 import socket, click , os
 from app.file_service import file_prompt
+from app.utils.constant import (
+    UTF,
+    IA,
+    SAY_SOMETHING,
+    ENTER_SERVER_IP,
+    CONNECTION_LOST,
+    CONNECTION_IMPOSSIBLE,
+    DASHED
+)   
 
  
 def Main():
     
-    adresse_ip = click.prompt("Entrez l' adresse IP du serveur ")
+    adresse_ip = click.prompt(ENTER_SERVER_IP)
     port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     try:
@@ -18,7 +27,7 @@ def Main():
 
                 file_prompt()
 
-            client = input(" Dîtes quelque chose (q : quitter , m : modifier api_key ) > ")
+            client = input(SAY_SOMETHING)
 
             if client == "q":    
                 break
@@ -28,19 +37,19 @@ def Main():
                 file_prompt()
                 break
 
-            s.send(client.encode('utf-8'))
+            s.send(client.encode(UTF.lower()))
             data = s.recv(1024)
 
-            click.echo("----------------------------------------------------------")
-            click.echo(f"<< 🤖 >> {str(data.decode('utf-8'))}")
+            click.echo(DASHED, color="green")
+            click.echo(f"<< {IA} >> {str(data.decode(UTF.lower()))}")
             click.echo("\n")
-            click.echo("----------------------------------------------------------")
+            click.echo(DASHED, color="green")
    
     except BrokenPipeError:
-        click.echo("Connexion perdue 😥")
+        click.echo(CONNECTION_LOST)
     
     except socket.gaierror:
-        click.echo("Connexion impossible 😥")
+        click.echo(CONNECTION_IMPOSSIBLE)
 
     finally:
         # close the connection

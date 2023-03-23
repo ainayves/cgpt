@@ -3,6 +3,12 @@
 import click 
 from app.plugin import davinci
 from app.file_service import file_prompt
+from app.utils.constant import (
+    SAY_SOMETHING,
+    DASHED,
+    IA,
+    BEGIN
+)
 
 
 def index(text_input : str) -> str:
@@ -10,11 +16,11 @@ def index(text_input : str) -> str:
 
 
 def prompt() -> None:
-    resp = "begin"
+    resp = BEGIN
     
     while len(resp) > 0:
 
-        client = input(" Dîtes quelque chose (q : quitter , m : modifier api_key ) > ")
+        client = input(SAY_SOMETHING)
 
         if client == "q":
             break
@@ -29,7 +35,7 @@ def prompt() -> None:
         if resp == None:
             break
         
-        click.echo("----------------------------------------------------------")
-        click.echo(f"<< 🤖 >> {resp}")
+        click.echo(DASHED, color="green")
+        click.echo(f"<< {IA} >> {resp}")
         click.echo("\n")
-        click.echo("----------------------------------------------------------")
+        click.echo(DASHED, color="green")

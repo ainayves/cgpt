@@ -1,34 +1,51 @@
 # -*- coding: utf-8 -*-
 
-import os
+import os, click
 from typing import Union
 import openai
 from app.file_service import file_prompt
 from dotenv import load_dotenv
 load_dotenv()
+from app.utils.constant import (
+    HUMAN,
+    AI_COLON,
+    CHOICES,
+    TEXT,
+    STR_OPENAI_API_KEY,
+    DAVINCI_MODEL,
+    DAVINCI_PROMPT,
+    INCORRECT_API_KEY,
+    TEMPERATURE,
+    MAX_TOKENS,
+    TOP_P,
+    FREQUENCY_P,
+    PRESENCE_P,
+    OPENAI_REQUEST_TIMEOUT,
+    NOT_CONNECTED
+)
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
 def davinci(what : str) -> Union[str, None]:
 
     try:
         response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=f"The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:{what}",
-        temperature=0.9,
-        max_tokens=200,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.6,
-        stop=[" Human:", " AI:"]
+        model=DAVINCI_MODEL,
+        prompt=f"{DAVINCI_PROMPT}{what}",
+        temperature=TEMPERATURE,
+        max_tokens=MAX_TOKENS,
+        top_p=TOP_P,
+        frequency_penalty=FREQUENCY_P,
+        presence_penalty=PRESENCE_P,
+        stop=[HUMAN, AI_COLON]
         )
         
-        res = response["choices"][0]["text"].replace("AI:","")
+        res = response[CHOICES][0][TEXT].replace(AI_COLON,"")
 
     
     except openai.error.AuthenticationError:
 
-        modify_apikey = input("Votre API KEY est incorrect, tapez `m` pour modifer le key , ou `q` pour quitter > ")
+        modify_apikey = input(INCORRECT_API_KEY)
 
         if modify_apikey == "m" :
 
@@ -39,5 +56,14 @@ def davinci(what : str) -> Union[str, None]:
 
             res = None
             
+    except openai.error.Timeout:
+        click.echo(OPENAI_REQUEST_TIMEOUT)
+        res = None
+
+    
+    except openai.error.APIConnectionError:
+
+        click.echo(NOT_CONNECTED)
+        res = None
 
     return res
