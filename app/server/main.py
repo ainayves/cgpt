@@ -15,7 +15,10 @@ def threaded(c):
 
         try:
             
-            c.send(index(client_data).encode(encoding=UTF))
+            if client_data is not None : 
+                c.send(index(client_data).encode(encoding=UTF))
+            else : 
+                continue
         
         except BrokenPipeError:
             continue

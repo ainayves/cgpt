@@ -10,7 +10,6 @@ from app.utils.constant import (
     BEGIN
 )
 
-
 def index(text_input : str) -> str:
     return davinci(text_input)
 
