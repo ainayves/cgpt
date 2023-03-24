@@ -46,3 +46,4 @@ DAVINCI_PROMPT = "The following is a conversation with an AI. The AI is helpful,
 INCORRECT_API_KEY = "Votre API KEY est incorrect, tapez `m` pour modifer le key , ou `q` pour quitter > "
 OPENAI_REQUEST_TIMEOUT = "IA endormie"
 NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
+TOO_MUCH_REQUEST = "Trop de requête"

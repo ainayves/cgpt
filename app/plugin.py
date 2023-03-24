@@ -22,7 +22,8 @@ from app.utils.constant import (
     PRESENCE_P,
     OPENAI_REQUEST_TIMEOUT,
     NOT_CONNECTED,
-    AI_COLON_SPACE
+    AI_COLON_SPACE,
+    TOO_MUCH_REQUEST
 )
 
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
@@ -57,6 +58,7 @@ def davinci(what : str) -> Union[str, None]:
             res = None
             
     except openai.error.Timeout:
+
         click.echo(OPENAI_REQUEST_TIMEOUT)
         res = None
 
@@ -64,6 +66,11 @@ def davinci(what : str) -> Union[str, None]:
     except openai.error.APIConnectionError:
 
         click.echo(NOT_CONNECTED)
+        res = None
+
+    except openai.error.RateLimitError:
+
+        click.echo(TOO_MUCH_REQUEST)
         res = None
 
     return res
