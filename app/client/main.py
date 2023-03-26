@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import socket, click , os
-from app.file_service import file_prompt
+import socket, click 
 from app.utils.constant import (
     UTF,
     IA,
@@ -9,41 +8,36 @@ from app.utils.constant import (
     ENTER_SERVER_IP,
     CONNECTION_LOST,
     CONNECTION_IMPOSSIBLE,
-    DASHED
+    DASHED,
+    PORT
 )   
 
- 
-def Main():
+from app.utils.verify_env import _check_env_file
+from app.base import Base_CGPT
+
+
+def main():
     
     adresse_ip = click.prompt(ENTER_SERVER_IP)
-    port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     try:
 
-        s.connect((adresse_ip,port))
-        while True:
-            
-            if not os.path.isfile(".env"): 
+        s.connect((adresse_ip, int(PORT)))
+        Base_CGPT._void_func = _check_env_file
 
-                file_prompt()
+        cgpt = Base_CGPT(
+            exit_key="q",
+            modify_api_key="m",
+            input_text=SAY_SOMETHING,
+            decoration=DASHED,
+            encode=UTF,
+            icon_ans=IA,
+            socket_resp=True,
+            socket_instance=s
 
-            client = input(SAY_SOMETHING)
+        )
 
-            if client == "q":    
-                break
-            
-            elif client == "m":
-                
-                file_prompt()
-                break
-
-            s.send(client.encode(UTF.lower()))
-            data = s.recv(1024)
-
-            click.echo(DASHED, color=True)
-            click.echo(f"<< {IA} >> {str(data.decode(UTF.lower()))}")
-            click.echo("\n")
-            click.echo(DASHED, color=True)
+        cgpt.infinite_loop()
    
     except BrokenPipeError:
         click.echo(CONNECTION_LOST)
@@ -56,4 +50,4 @@ def Main():
         s.close()
  
 if __name__ == '__main__':
-    Main()
+    main()

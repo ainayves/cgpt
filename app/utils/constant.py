@@ -13,11 +13,16 @@ else:
     RELEIVED = ""
     SAD = ""
 
+init_conversation = [
+            {"role": "system", "content": "You are a helpful assistant."}
+        ]
+
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
 TOP_P = 1.0
 FREQUENCY_P = 0.0
 PRESENCE_P = 0.6
+PORT = 2048
 PORT = "2048"
 UTF = "UTF-8"
 BEGIN = "begin"
@@ -26,6 +31,8 @@ AI_COLON = "AI:"
 AI_COLON_SPACE = " AI:"
 CHOICES = "choices"
 TEXT = "text"
+MESSAGE = "message"
+CONTENT = "content"
 STR_OPENAI_API_KEY = "OPENAI_API_KEY"
 SERVER_PATH = "/app/server/main.py"
 CLIENT_PATH = "/app/client/main.py"
@@ -41,8 +48,9 @@ ENTER_SERVER_IP = "Entrez l' adresse IP du serveur "
 CONNECTION_LOST = f"Connexion perdue {SAD}" 
 CONNECTION_IMPOSSIBLE = f"Connexion impossible {SAD}"
 DASHED = "----------------------------------------------------------"
-DAVINCI_MODEL = "text-davinci-003"
+DAVINCI_MODEL = "gpt-3.5-turbo"
 DAVINCI_PROMPT = "The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:"
 INCORRECT_API_KEY = "Votre API KEY est incorrect, tapez `m` pour modifer le key , ou `q` pour quitter > "
 OPENAI_REQUEST_TIMEOUT = "IA endormie"
 NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
+TOO_MUCH_REQUEST = "Trop de requête"
