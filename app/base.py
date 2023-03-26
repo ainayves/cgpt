@@ -1,3 +1,4 @@
+from typing import Union , List, Dict
 import click, socket
 from app.file_service import file_prompt
 from app.plugin import davinci
@@ -35,7 +36,7 @@ class Base_CGPT():
 
         pass
 
-    def _I_O_func(self , socket_resp : bool , client_input : str = None,  socket = None) -> str:
+    def _I_O_func(self , socket_resp : bool , previous_conv : List[Dict], client_input : str = None,  socket = None) -> str:
 
         
         if socket_resp :
@@ -55,11 +56,15 @@ class Base_CGPT():
 
             res = str(data.decode(self.encode.lower()))
         else:
-            res = davinci(client_input)
+            res = davinci(client_input, previous_conv)
 
         return res
 
     def infinite_loop(self) -> None:
+
+        init_conversation = [
+            {"role": "system", "content": "You are a helpful assistant."}
+        ]
 
         while True :
 
@@ -73,8 +78,11 @@ class Base_CGPT():
                 file_prompt()
                 break
 
-            resp = self._I_O_func(self.socket_resp, client_input=client, socket=self.socket_instance)
+            resp = self._I_O_func(self.socket_resp, previous_conv=init_conversation, client_input=client, socket=self.socket_instance)
             
+            init_conversation.append(
+                {"role": "assistant", "content": "The Los Angeles Dodgers won the World Series in 2020."}
+            )
             if resp is None:
                 
                 break
