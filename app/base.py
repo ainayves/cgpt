@@ -2,7 +2,7 @@ from typing import Union , List, Dict
 import click, socket
 from app.file_service import file_prompt
 from app.plugin import davinci
-from app.utils.constant import init_conversation
+from app.utils.constant import init_conversation , ASSISTANT
 
 class Base_CGPT():
 
@@ -78,7 +78,7 @@ class Base_CGPT():
             resp = self._I_O_func(self.socket_resp, previous_conv=init_conversation, client_input=client, socket=self.socket_instance)
             
             init_conversation.append(
-                {"role": "assistant", "content": resp}
+                {"role": ASSISTANT, "content": resp}
             )
             if resp is None:
                 

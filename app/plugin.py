@@ -16,7 +16,8 @@ from app.utils.constant import (
     CONTENT,
     OPENAI_REQUEST_TIMEOUT,
     NOT_CONNECTED,
-    TOO_MUCH_REQUEST
+    TOO_MUCH_REQUEST,
+    USER
 )
 
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
@@ -24,7 +25,7 @@ openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 def davinci(what : str, previous_conv :  List[Dict]) -> Union[str, None]:
     try:
         
-        previous_conv.append({"role": "user", "content": what})
+        previous_conv.append({"role": USER, "content": what})
         response = openai.ChatCompletion.create(
         model=DAVINCI_MODEL,
         messages=previous_conv
