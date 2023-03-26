@@ -1,6 +1,8 @@
+from typing import Union , List, Dict
 import click, socket
 from app.file_service import file_prompt
 from app.plugin import davinci
+from app.utils.constant import init_conversation
 
 class Base_CGPT():
 
@@ -35,7 +37,7 @@ class Base_CGPT():
 
         pass
 
-    def _I_O_func(self , socket_resp : bool , client_input : str = None,  socket = None) -> str:
+    def _I_O_func(self , socket_resp : bool , previous_conv : List[Dict], client_input : str = None,  socket = None) -> str:
 
         
         if socket_resp :
@@ -55,7 +57,7 @@ class Base_CGPT():
 
             res = str(data.decode(self.encode.lower()))
         else:
-            res = davinci(client_input)
+            res = davinci(client_input, previous_conv)
 
         return res
 
@@ -73,8 +75,11 @@ class Base_CGPT():
                 file_prompt()
                 break
 
-            resp = self._I_O_func(self.socket_resp, client_input=client, socket=self.socket_instance)
+            resp = self._I_O_func(self.socket_resp, previous_conv=init_conversation, client_input=client, socket=self.socket_instance)
             
+            init_conversation.append(
+                {"role": "assistant", "content": resp}
+            )
             if resp is None:
                 
                 break

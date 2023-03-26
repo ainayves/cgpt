@@ -1,48 +1,36 @@
 # -*- coding: utf-8 -*-
 
 import os, click
-from typing import Union
+from typing import Union , List, Dict
 import openai
 from app.file_service import file_prompt
 from dotenv import load_dotenv
 load_dotenv()
 from app.utils.constant import (
-    HUMAN,
     AI_COLON,
     CHOICES,
-    TEXT,
     STR_OPENAI_API_KEY,
     DAVINCI_MODEL,
-    DAVINCI_PROMPT,
     INCORRECT_API_KEY,
-    TEMPERATURE,
-    MAX_TOKENS,
-    TOP_P,
-    FREQUENCY_P,
-    PRESENCE_P,
+    MESSAGE,
+    CONTENT,
     OPENAI_REQUEST_TIMEOUT,
     NOT_CONNECTED,
-    AI_COLON_SPACE,
     TOO_MUCH_REQUEST
 )
 
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
-def davinci(what : str) -> Union[str, None]:
-
+def davinci(what : str, previous_conv :  List[Dict]) -> Union[str, None]:
     try:
-        response = openai.Completion.create(
+        
+        previous_conv.append({"role": "user", "content": what})
+        response = openai.ChatCompletion.create(
         model=DAVINCI_MODEL,
-        prompt=f"{DAVINCI_PROMPT}{what}",
-        temperature=TEMPERATURE,
-        max_tokens=MAX_TOKENS,
-        top_p=TOP_P,
-        frequency_penalty=FREQUENCY_P,
-        presence_penalty=PRESENCE_P,
-        stop=[HUMAN, AI_COLON_SPACE]
+        messages=previous_conv
         )
         
-        res = response[CHOICES][0][TEXT].replace(AI_COLON,"")
+        res = response[CHOICES][0][MESSAGE][CONTENT].replace(AI_COLON,"")
 
     except openai.error.AuthenticationError:
 

@@ -8,7 +8,8 @@ from app.utils.constant import (
     ENTER_SERVER_IP,
     CONNECTION_LOST,
     CONNECTION_IMPOSSIBLE,
-    DASHED
+    DASHED,
+    PORT
 )   
 
 from app.utils.verify_env import _check_env_file
@@ -18,11 +19,10 @@ from app.base import Base_CGPT
 def main():
     
     adresse_ip = click.prompt(ENTER_SERVER_IP)
-    port = 2048
     s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     try:
 
-        s.connect((adresse_ip,port))
+        s.connect((adresse_ip, int(PORT)))
         Base_CGPT._void_func = _check_env_file
 
         cgpt = Base_CGPT(
