@@ -37,13 +37,13 @@ class Base_CGPT():
 
     def _I_O_func(self , socket_resp : bool , client_input : str = None,  socket = None) -> str:
 
-        print(client_input)
+        
         if socket_resp :
             if client_input is not None:
                 socket.send(client_input.encode(self.encode.lower()))
             
             elif client_input == self.exit_key:
-                print(f"{client_input}")
+                
                 return
             
             elif client_input == self.modify_api_key:
@@ -74,9 +74,9 @@ class Base_CGPT():
                 break
 
             resp = self._I_O_func(self.socket_resp, client_input=client, socket=self.socket_instance)
-            print(resp)
+            
             if resp is None:
-                print("ato")
+                
                 break
             
             click.echo(self.decoration, color=True)

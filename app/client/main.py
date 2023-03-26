@@ -23,24 +23,21 @@ def main():
     try:
 
         s.connect((adresse_ip,port))
-        while True:
-            
+        Base_CGPT._void_func = _check_env_file
 
-            Base_CGPT._void_func = _check_env_file
+        cgpt = Base_CGPT(
+            exit_key="q",
+            modify_api_key="m",
+            input_text=SAY_SOMETHING,
+            decoration=DASHED,
+            encode=UTF,
+            icon_ans=IA,
+            socket_resp=True,
+            socket_instance=s
 
-            cgpt = Base_CGPT(
-                exit_key="q",
-                modify_api_key="m",
-                input_text=SAY_SOMETHING,
-                decoration=DASHED,
-                encode=UTF,
-                icon_ans=IA,
-                socket_resp=True,
-                socket_instance=s
+        )
 
-            )
-
-            cgpt.infinite_loop()
+        cgpt.infinite_loop()
    
     except BrokenPipeError:
         click.echo(CONNECTION_LOST)
