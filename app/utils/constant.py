@@ -7,11 +7,13 @@ if os_name == "Linux" or os_name == "Darwin":
     HAPPY = "😃"
     RELEIVED = "😌"
     SAD = "😥"
+    NO_ENTRY = "🚫"
 else:
     IA = ""
     HAPPY = ""
     RELEIVED = ""
     SAD = ""
+    NO_ENTRY = ""
 
 init_conversation = [
             {"role": "system", "content": "You are a helpful assistant."}
@@ -57,3 +59,4 @@ OPENAI_REQUEST_TIMEOUT = "IA endormie"
 NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
 TOO_MUCH_REQUEST = "Trop de requête"
 CONNECTION_ERROR = "Erreur de connexion : "
+ADDRESS_NOT_VALID = f"L' adresse IP n' est pas valide {NO_ENTRY}"
