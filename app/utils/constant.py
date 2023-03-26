@@ -13,6 +13,10 @@ else:
     RELEIVED = ""
     SAD = ""
 
+init_conversation = [
+            {"role": "system", "content": "You are a helpful assistant."}
+        ]
+        
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
 TOP_P = 1.0
