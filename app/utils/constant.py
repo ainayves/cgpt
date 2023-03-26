@@ -16,12 +16,13 @@ else:
 init_conversation = [
             {"role": "system", "content": "You are a helpful assistant."}
         ]
-        
+
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
 TOP_P = 1.0
 FREQUENCY_P = 0.0
 PRESENCE_P = 0.6
+PORT = 2048
 PORT = "2048"
 UTF = "UTF-8"
 BEGIN = "begin"
