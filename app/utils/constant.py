@@ -56,3 +56,4 @@ INCORRECT_API_KEY = "Votre API KEY est incorrect, tapez `m` pour modifer le key 
 OPENAI_REQUEST_TIMEOUT = "IA endormie"
 NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
 TOO_MUCH_REQUEST = "Trop de requête"
+CONNECTION_ERROR = "Erreur de connexion : "

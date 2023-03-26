@@ -6,7 +6,7 @@ from app.utils.constant import (
     IA,
     SAY_SOMETHING,
     ENTER_SERVER_IP,
-    CONNECTION_LOST,
+    CONNECTION_ERROR,
     CONNECTION_IMPOSSIBLE,
     DASHED,
     PORT
@@ -38,12 +38,18 @@ def main():
         )
 
         cgpt.infinite_loop()
-   
-    except BrokenPipeError:
-        click.echo(CONNECTION_LOST)
+    except OSError as e: 
+
+        if e.errno == 113:
+            click.echo(CONNECTION_IMPOSSIBLE)
+        else:
+            click.echo(CONNECTION_ERROR, e)
+
+    # except BrokenPipeError:
+    #     click.echo(CONNECTION_LOST)
     
-    except socket.gaierror:
-        click.echo(CONNECTION_IMPOSSIBLE)
+    # except socket.gaierror:
+    #     click.echo(CONNECTION_IMPOSSIBLE)
 
     finally:
         # close the connection
