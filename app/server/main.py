@@ -15,8 +15,9 @@ def threaded(c):
         client_data = c.recv(1024).decode()
         try:
             
-            if client_data is not None : 
-                c.send(davinci(client_data, init_conversation_client).encode(encoding=UTF))
+            api_response = davinci(client_data, init_conversation_client)
+            if api_response is not None : 
+                c.send(api_response.encode(encoding=UTF))
             else : 
                 continue
         
