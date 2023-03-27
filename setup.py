@@ -10,13 +10,13 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '1.1.32',
+    version = '1.1.33',
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
     description = 'Use openai chat-gpt on your cli',
     long_description=long_desc,
-    url = 'https://github.com/Aina15-DT/cli-gpt>',
+    url = 'https://github.com/ainayves/cgpt>',
     long_description_content_type='text/markdown',
     py_modules = ['cgpt','app'],
     packages = ['app', 'app.client', 'app.server' , 'app.utils'],

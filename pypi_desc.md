@@ -13,7 +13,7 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 ### SETUP
 
 ```
-pip install cgpt==0.1.21
+pip install cgpt==1.1.32
 ```
 
 ### 🚀 RUN
@@ -21,3 +21,7 @@ pip install cgpt==0.1.21
 ```
 cgpt tellme
 ```
+
+### New Feature
+
+- Now , you can use cgpt inside a local network. You just need one host (connected to internet) to be the server, and every host (not connected) can use Chat GPT without internet  
