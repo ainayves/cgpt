@@ -26,7 +26,7 @@ def threaded(c):
 
 def main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
-    server_socket = socket.create_server((adresse_ip, 2048), reuse_port=False)
+    server_socket = socket.create_server((adresse_ip, int(PORT)), reuse_port=False)
     server_socket.listen()
     click.echo(f"{SERVER_LIVE} {adresse_ip} ..")
     while True:
