@@ -1,6 +1,6 @@
 import platform
 
-VERSION= "1.1.23"
+VERSION= "1.1.24"
 
 os_name = platform.system()
 
