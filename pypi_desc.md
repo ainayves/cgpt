@@ -22,9 +22,9 @@ pip install cgpt
 cgpt tellme
 ```
 
-### 🌞 NEW FEATURE : CGPT INSIDE A LOCAL NETWORK
+### 🔗 CGPT INSIDE A LOCAL NETWORK
 
-Now , you can use cgpt inside a LAN. 
+You can use cgpt inside a LAN. 
 
 - You just need one Host (`connected to internet`) to be the server.
 - Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`. 

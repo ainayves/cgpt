@@ -1,5 +1,11 @@
 ![](https://komarev.com/ghpvc/?username=ainayves&color=blueviolet)
 
+</br>
+
+https://user-images.githubusercontent.com/66997516/228263166-01828e31-3bc1-46b9-ad37-9d44ca117d7f.mp4
+
+</br>
+
 ## Use openai chat-gpt on your cli
 cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal.
 
@@ -36,12 +42,9 @@ Then , :
 cgpt tellme
 ```
 
-### 🌞 NEW FEATURE : CGPT INSIDE A LOCAL NETWORK
+### 🔗 CGPT INSIDE A LOCAL NETWORK
 
-https://user-images.githubusercontent.com/66997516/228263166-01828e31-3bc1-46b9-ad37-9d44ca117d7f.mp4
-
-</br>
-Now , you can use cgpt inside a LAN. 
+You can use cgpt inside a LAN. 
 
 - You just need one Host (`connected to internet`) to be the server.
 - Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`. 
