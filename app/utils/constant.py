@@ -10,12 +10,14 @@ if os_name == "Linux" or os_name == "Darwin":
     RELEIVED = "😌"
     SAD = "😥"
     NO_ENTRY = "🚫"
+    LIVE = "✨"
 else:
     IA = "IA"
     HAPPY = ""
     RELEIVED = ""
     SAD = ""
     NO_ENTRY = ""
+    LIVE = ""
 
 init_conversation = [
             {"role": "system", "content": "You are a helpful assistant."}
