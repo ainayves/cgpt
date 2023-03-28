@@ -1,4 +1,4 @@
-![](https://visitor-badge.glitch.me/badge?page_id=Aina15-DT.cli-gpt)
+![](https://komarev.com/ghpvc/?username=ainayves&color=blueviolet)
 
 ## Use openai chat-gpt on your cli
 cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal.
