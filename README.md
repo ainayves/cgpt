@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/66997516/228263166-01828e31-3bc1-46b9-
 
 </br>
 
-cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal.
+`cgpt` is a Python module that allows you to use Chat-GPT directly in your Terminal.
 
 ### ❓ REQUIREMENTS
 
