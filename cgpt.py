@@ -8,7 +8,8 @@ from app.utils.constant import (
     CLIENT_PATH,
     CGPT_NETWORK,
     YOU_SERVER,
-    OPEN_TERMINAL
+    OPEN_TERMINAL,
+    VERSION
     )
 
 
@@ -20,6 +21,10 @@ def cli():
 @click.option('-n', '--name', type=str, help='Name to greet', default='World')
 def hello(name):
     click.echo(f'Hello {name}')
+
+@cli.command()
+def version():
+    click.echo(VERSION)
 
 @cli.command()
 def tellme():

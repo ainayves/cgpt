@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import setup
+from app.utils.constant import VERSION
 
 with open("pypi_desc.md", "r", encoding="utf-8") as fh:
     long_desc = fh.read()
@@ -10,7 +11,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '1.1.33',
+    version = VERSION,
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
