@@ -13,7 +13,7 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 ### SETUP
 
 ```
-pip install cgpt==1.1.32
+pip install cgpt==1.1.35
 ```
 
 ### 🚀 RUN
@@ -22,6 +22,10 @@ pip install cgpt==1.1.32
 cgpt tellme
 ```
 
-### New Feature
+### 🌞 NEW FEATURE : CGPT INSIDE A LOCAL NETWORK
 
-- Now , you can use cgpt inside a local network. You just need one host (connected to internet) to be the server, and every host (not connected) can use Chat GPT without internet  
+Now , you can use cgpt inside a LAN. 
+
+- You just need one Host (`connected to internet`) to be the server, and other Hosts (`not connected to internet`) can ALWAYS use Chat GPT.  
+
+- NOTE : For now , a server must be launched inside a Linux computer . If the server is inside Windows , the serving address is sometimes wrong (TODO for the next release)
