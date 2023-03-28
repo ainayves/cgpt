@@ -43,7 +43,7 @@ Now , you can use cgpt inside a LAN.
 
 - You just need one Host (`connected to internet`) to be the server, and other Hosts (`not connected to internet`) can ALWAYS use Chat GPT.  
 
-- NOTE : For now , a server must be launched inside a Linux computer . If the server is inside Windows , the serving address is sometimes wrong (TODO for the next release)
+- NOTE : For now , a server must be launched inside a Linux computer . If the server is inside Windows , the server address is sometimes wrong (TODO for the next release)
 
 ### 💚 Feedback
 
