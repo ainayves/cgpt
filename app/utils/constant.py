@@ -1,5 +1,7 @@
 import platform
 
+VERSION= "1.2.33"
+
 os_name = platform.system()
 
 if os_name == "Linux" or os_name == "Darwin":
@@ -9,7 +11,7 @@ if os_name == "Linux" or os_name == "Darwin":
     SAD = "😥"
     NO_ENTRY = "🚫"
 else:
-    IA = ""
+    IA = "IA"
     HAPPY = ""
     RELEIVED = ""
     SAD = ""
@@ -60,4 +62,4 @@ NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
 TOO_MUCH_REQUEST = "Trop de requête"
 CONNECTION_ERROR = "Erreur de connexion : "
 ADDRESS_NOT_VALID = f"L' adresse IP n' est pas valide {NO_ENTRY}"
-VERSION= "1.2.33"
+
