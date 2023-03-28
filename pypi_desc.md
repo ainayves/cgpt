@@ -1,7 +1,7 @@
 ![](https://komarev.com/ghpvc/?username=ainayves&color=blueviolet)
 
 ## Use openai chat-gpt on your cli
-cgpt is a Python module that allows you to use Chat-GPT directly in your Terminal.
+`cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
 ### REQUIREMENTS
 
