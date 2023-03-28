@@ -51,7 +51,6 @@ def davinci(what : str, previous_conv :  List[Dict]) -> Union[str, None]:
         click.echo(OPENAI_REQUEST_TIMEOUT)
         res = None
 
-    
     except openai.error.APIConnectionError:
 
         click.echo(NOT_CONNECTED)
