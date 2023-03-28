@@ -30,7 +30,6 @@ Then , :
 ./build.sh
 ```
 
-
 ### 🚀 RUN
 
 ```
@@ -38,6 +37,8 @@ cgpt tellme
 ```
 
 ### 🌞 NEW FEATURE : CGPT INSIDE A LOCAL NETWORK
+
+https://user-images.githubusercontent.com/66997516/228263166-01828e31-3bc1-46b9-ad37-9d44ca117d7f.mp4
 
 Now , you can use cgpt inside a LAN. 
 
