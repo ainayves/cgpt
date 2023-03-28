@@ -13,8 +13,8 @@ def threaded(c):
     while True:
         
         client_data = c.recv(1024).decode()
+
         try:
-            
             api_response = davinci(client_data, init_conversation_client)
             if api_response is not None : 
                 c.send(api_response.encode(encoding=UTF))
@@ -31,7 +31,7 @@ def main():
     click.echo(f"{SERVER_LIVE} {adresse_ip} ..{LIVE}")  
     while True:
         client, _ = server_socket.accept()
-        threading.Thread(target=threaded,args=(client,), daemon=True).start()
+        threading.Thread(target=threaded, args=(client,), daemon=True).start()
 
 if __name__ == "__main__":
     main()

@@ -17,12 +17,12 @@ from app.utils.constant import (
 from app.utils.verify_env import _check_env_file
 from app.base import Base_CGPT
 
-
 def main():
     
     adresse_ip = click.prompt(ENTER_SERVER_IP)
 
     try:
+
         ipaddress.IPv4Address(adresse_ip)
         s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         try:
@@ -39,10 +39,10 @@ def main():
                 icon_ans=IA,
                 socket_resp=True,
                 socket_instance=s
-
             )
 
             cgpt.infinite_loop()
+
         except OSError as e: 
 
             if e.errno == 113:
