@@ -1,4 +1,7 @@
-from setuptools import setup, find_packages
+# -*- coding: utf-8 -*-
+
+from setuptools import setup
+from app.utils.constant import VERSION
 
 with open("pypi_desc.md", "r", encoding="utf-8") as fh:
     long_desc = fh.read()
@@ -8,16 +11,16 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     
 setup(
     name = 'cgpt',
-    version = '0.1.21',
+    version = VERSION,
     author = 'Aina Yves',
     author_email = 'randrianaina.yves@gmail.com',
     license = 'MIT',
     description = 'Use openai chat-gpt on your cli',
     long_description=long_desc,
-    url = 'https://github.com/Aina15-DT/cli-gpt>',
+    url = 'https://github.com/ainayves/cgpt>',
     long_description_content_type='text/markdown',
     py_modules = ['cgpt','app'],
-    packages = find_packages(),
+    packages = ['app', 'app.client', 'app.server' , 'app.utils'],
     install_requires = ['setuptools',
                         'twine',
                         'click>=7.1.2',

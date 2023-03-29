@@ -1,32 +1,28 @@
-import click 
-from app.plugin import davinci
-from app.file_service import file_prompt
+# -*- coding: utf-8 -*-
 
-def index(text_input : str) -> str:
-    return davinci(text_input)
+from app.utils.constant import (
+    SAY_SOMETHING,
+    DASHED,
+    UTF,
+    IA
+)
+
+from app.base import Base_CGPT
 
 
 def prompt() -> None:
-    resp = "begin"
+    
+    cgpt = Base_CGPT(
+        exit_key="q",
+        modify_api_key="m",
+        input_text=SAY_SOMETHING,
+        decoration=DASHED,
+        encode=UTF,
+        icon_ans=IA,
+        socket_resp=False,
+        socket_instance=None
+    )
 
-    while len(resp) > 0:
+    cgpt.infinite_loop()
 
-        client = input(" Dîtes quelque chose (q : quitter , m : modifier api_key ) > ")
-
-        if client == "q":
-            break
-        
-        elif client == "m":
-            
-            file_prompt()
-            break
-
-        resp = index(client)
-
-        if resp == None:
-            break
-        
-        click.echo("----------------------------------------------------------")
-        click.echo(f"<< 🤖 >> {resp}")
-        click.echo("\n")
-        click.echo("----------------------------------------------------------")
+    
