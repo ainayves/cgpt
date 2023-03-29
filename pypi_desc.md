@@ -15,6 +15,17 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 ```
 pip install cgpt
 ```
+### 😌 VERIFY IF IT IS CORRECTLY INSTALLED
+
+```
+cgpt hello
+```
+
+### ⏯️ GET VERSION 
+
+```
+cgpt version
+```
 
 ### 🚀 RUN
 
@@ -32,6 +43,14 @@ You can use cgpt inside a LAN.
 NOTES : 
 
 - For now , a server must be launched inside a `Linux` computer . If the server is inside `Windows` : the address is sometimes wrong (to be fixed in the next version). 
+
+- Also , make sure that your `/etc/hosts` is configured correctly like :
+
+```
+127.0.0.1	localhost
+127.0.1.1	your-hostanme
+```
+
 - A `client` can also use his own api_key in the next version.
 
 ### GITHUB

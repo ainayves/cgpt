@@ -1,6 +1,6 @@
 import platform
 
-VERSION= "1.1.24"
+VERSION= "1.1.25"
 
 os_name = platform.system()
 
@@ -64,4 +64,5 @@ NOT_CONNECTED = "Vous êtes déconnecté d' internet .."
 TOO_MUCH_REQUEST = "Trop de requête"
 CONNECTION_ERROR = "Erreur de connexion : "
 ADDRESS_NOT_VALID = f"L' adresse IP n' est pas valide {NO_ENTRY}"
+DECONNECTED_HOST = "Un hôte s' est donnecté"
 

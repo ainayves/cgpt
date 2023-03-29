@@ -5,16 +5,17 @@ from _thread import *
 import threading
 print_lock = threading.Lock()
 from app.plugin import davinci
-from app.utils.constant import PORT , SERVER_LIVE , UTF , LIVE , init_conversation
+from app.utils.constant import PORT , SERVER_LIVE , UTF , LIVE , DECONNECTED_HOST , init_conversation
 
 def threaded(c):
     
     init_conversation_client = init_conversation
     while True:
         
-        client_data = c.recv(1024).decode()
-
         try:
+            client_data = c.recv(1024).decode()
+
+        
             api_response = davinci(client_data, init_conversation_client)
             if api_response is not None : 
                 c.send(api_response.encode(encoding=UTF))
@@ -23,6 +24,9 @@ def threaded(c):
         
         except BrokenPipeError:
             continue
+
+        except ConnectionResetError:
+            click.echo(DECONNECTED_HOST)
 
 def main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
