@@ -1,5 +1,5 @@
 ![python](https://img.shields.io/badge/Python-3.7-blue.svg)
-![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=magenta)
+![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
 
 
 ## Use openai chat-gpt inside your CLI
