@@ -1,4 +1,4 @@
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![python](https://img.shields.io/badge/Python-3.7-blue.svg)
 ![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=magenta)
 
 
