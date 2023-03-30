@@ -1,4 +1,6 @@
-![](https://komarev.com/ghpvc/?username=ainayves&color=blueviolet)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=magenta)
+
 
 ## Use openai chat-gpt inside your CLI
 </br>
