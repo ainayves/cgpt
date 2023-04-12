@@ -1,6 +1,6 @@
 import platform
 
-VERSION= "1.1.25"
+VERSION = "1.1.26"
 
 os_name = platform.system()
 
@@ -19,9 +19,7 @@ else:
     NO_ENTRY = ""
     LIVE = ""
 
-init_conversation = [
-            {"role": "system", "content": "You are a helpful assistant."}
-        ]
+init_conversation = [{"role": "system", "content": "You are a helpful assistant."}]
 
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
@@ -49,11 +47,13 @@ YOU_SERVER = f"---> Êtes vous le serveur {HAPPY} ?"
 OPEN_TERMINAL = f"----> Veuillez ouvrir un autre terminal..{RELEIVED}"
 SERVER_LIVE = "Serveur live sur "
 GET_API_KEY = "Ajoutez votre api key (invisible input) >"
-API_KEY_ADDED = "Votre API KEY a bien été ajouté , veuillez relancer la commande `cgpt tellme` "
+API_KEY_ADDED = (
+    "Votre API KEY a bien été ajouté , veuillez relancer la commande `cgpt tellme` "
+)
 API_KEY_NOT_ADDED = "\n Vous n' avez pas ajouter un API KEY \n"
 SAY_SOMETHING = " Dîtes quelque chose (q : quitter , m : modifier api_key ) > "
 ENTER_SERVER_IP = "Entrez l' adresse IP du serveur "
-CONNECTION_LOST = f"Connexion perdue {SAD}" 
+CONNECTION_LOST = f"Connexion perdue {SAD}"
 CONNECTION_IMPOSSIBLE = f"Connexion impossible {SAD}"
 DASHED = "----------------------------------------------------------"
 DAVINCI_MODEL = "gpt-3.5-turbo"
@@ -65,4 +65,3 @@ TOO_MUCH_REQUEST = "Trop de requête"
 CONNECTION_ERROR = "Erreur de connexion : "
 ADDRESS_NOT_VALID = f"L' adresse IP n' est pas valide {NO_ENTRY}"
 DECONNECTED_HOST = "Un hôte s' est donnecté"
-
