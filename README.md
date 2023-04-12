@@ -26,7 +26,6 @@ pip install -r requirements.txt
 ### 🔨 BUILD
 
 - For this part , it is better to use Linux.
-- Create a build.sh file , copy - paste the content of build.sh.example.
 
 If you are on Linux , launch:
 
