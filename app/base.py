@@ -1,8 +1,8 @@
 from typing import List, Dict
-import click, socket
+import click, socket , textwrap
 from app.file_service import file_prompt
 from app.plugin import davinci
-from app.utils.constant import init_conversation, ASSISTANT , color , top_left, top_right , bottom_left, bottom_right
+from app.utils.constant import init_conversation, ASSISTANT , MAX_WIDTH, color , top_left, top_right , bottom_left, bottom_right , IA
 from termcolor import colored
 
 
@@ -87,14 +87,31 @@ class Base_CGPT:
             
             result = resp
             len_res = len(result)
+            emoji_str = IA.encode('utf-8').decode('utf-8') if IA != "IA" else "IA"
 
+            if len(result) > MAX_WIDTH - 4:
+                wrapped_result = textwrap.wrap(result, MAX_WIDTH - 4)
+                len_res = MAX_WIDTH - 4
+            else:
+                wrapped_result = [result]
+                len_res = len(result)
+
+            
             box = colored(top_left, color) + colored("─", color) * (len_res + 2) + colored(top_right, color) + "\n"
             box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
-            box += colored("│", color) + " " + colored(result) +  " " + colored("│", color) +  "\n"
+            for line in wrapped_result:
+                box += colored("│", color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3) + colored("│", color) + "\n"
+
             box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
             box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) + colored(bottom_right, color)
 
             click.echo(box)
+
+        
+
+
+
+
             
             
 

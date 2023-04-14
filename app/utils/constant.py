@@ -42,6 +42,7 @@ AI_COLON = "AI:"
 AI_COLON_SPACE = " AI:"
 CHOICES = "choices"
 TEXT = "text"
+MAX_WIDTH = 100
 MESSAGE = "message"
 CONTENT = "content"
 STR_OPENAI_API_KEY = "OPENAI_API_KEY"
