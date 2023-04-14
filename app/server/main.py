@@ -14,6 +14,7 @@ from app.utils.constant import (
     LIVE,
     DECONNECTED_HOST,
     init_conversation,
+    error_color,
     color
 )
 
@@ -34,7 +35,7 @@ def threaded(c):
             continue
 
         except ConnectionResetError:
-            click.echo(colored(DECONNECTED_HOST, color))
+            click.echo(colored(DECONNECTED_HOST, error_color))
 
 
 def main():

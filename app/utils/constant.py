@@ -21,6 +21,7 @@ else:
 
 init_conversation = [{"role": "system", "content": "You are a helpful assistant."}]
 color = "green"
+error_color = "yellow"
 top_left = "╭"
 top_right = "╮"
 bottom_left = "╰"
