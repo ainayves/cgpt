@@ -20,6 +20,11 @@ else:
     LIVE = ""
 
 init_conversation = [{"role": "system", "content": "You are a helpful assistant."}]
+color = "green"
+top_left = "╭"
+top_right = "╮"
+bottom_left = "╰"
+bottom_right = "╯"
 
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
@@ -42,9 +47,9 @@ CONTENT = "content"
 STR_OPENAI_API_KEY = "OPENAI_API_KEY"
 SERVER_PATH = "/app/server/main.py"
 CLIENT_PATH = "/app/client/main.py"
-CGPT_NETWORK = "--> Voulez-vous utiliser cgpt en réseaux ?"
-YOU_SERVER = f"---> Êtes vous le serveur {HAPPY} ?"
-OPEN_TERMINAL = f"----> Veuillez ouvrir un autre terminal..{RELEIVED}"
+CGPT_NETWORK = "Voulez-vous utiliser cgpt en réseaux ?"
+YOU_SERVER = f"Êtes vous le serveur {HAPPY} ?"
+OPEN_TERMINAL = f"Veuillez ouvrir un autre terminal..{RELEIVED}"
 SERVER_LIVE = "Serveur live sur "
 GET_API_KEY = "Ajoutez votre api key (invisible input) >"
 API_KEY_ADDED = (
@@ -65,3 +70,4 @@ TOO_MUCH_REQUEST = "Trop de requête"
 CONNECTION_ERROR = "Erreur de connexion : "
 ADDRESS_NOT_VALID = f"L' adresse IP n' est pas valide {NO_ENTRY}"
 DECONNECTED_HOST = "Un hôte s' est donnecté"
+

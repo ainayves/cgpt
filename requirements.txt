@@ -3,3 +3,4 @@ twine
 click
 openai
 python-dotenv
+termcolor

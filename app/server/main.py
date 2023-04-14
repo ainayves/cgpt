@@ -3,6 +3,7 @@
 import socket, click
 from _thread import *
 import threading
+from termcolor import colored
 
 print_lock = threading.Lock()
 from app.plugin import davinci
@@ -13,6 +14,7 @@ from app.utils.constant import (
     LIVE,
     DECONNECTED_HOST,
     init_conversation,
+    color
 )
 
 
@@ -32,14 +34,14 @@ def threaded(c):
             continue
 
         except ConnectionResetError:
-            click.echo(DECONNECTED_HOST)
+            click.echo(colored(DECONNECTED_HOST, color))
 
 
 def main():
     adresse_ip = socket.gethostbyname(socket.gethostname())
     server_socket = socket.create_server((adresse_ip, int(PORT)), reuse_port=False)
     server_socket.listen()
-    click.echo(f"{SERVER_LIVE} {adresse_ip} ..{LIVE}")
+    click.echo(colored(f"{SERVER_LIVE} {adresse_ip} ..{LIVE}", color))
     while True:
         client, _ = server_socket.accept()
         threading.Thread(target=threaded, args=(client,), daemon=True).start()

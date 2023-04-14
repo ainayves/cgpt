@@ -1,8 +1,10 @@
-from typing import Union, List, Dict
+from typing import List, Dict
 import click, socket
 from app.file_service import file_prompt
 from app.plugin import davinci
-from app.utils.constant import init_conversation, ASSISTANT
+from app.utils.constant import init_conversation, ASSISTANT , color , top_left, top_right , bottom_left, bottom_right
+from termcolor import colored
+
 
 
 class Base_CGPT:
@@ -82,8 +84,18 @@ class Base_CGPT:
             init_conversation.append({"role": ASSISTANT, "content": resp})
             if resp is None:
                 break
+            
+            result = resp
+            len_res = len(result)
 
-            click.echo(self.decoration, color=True)
-            click.echo(f"<< {self.icon_ans} >> {resp}")
-            click.echo("\n")
-            click.echo(self.decoration, color=True)
+            box = colored(top_left, color) + colored("─", color) * (len_res + 2) + colored(top_right, color) + "\n"
+            box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
+            box += colored("│", color) + " " + colored(result) +  " " + colored("│", color) +  "\n"
+            box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
+            box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) + colored(bottom_right, color)
+
+            click.echo(box)
+            
+            
+
+           

@@ -21,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     py_modules=["cgpt", "app"],
     packages=["app", "app.client", "app.server", "app.utils"],
-    install_requires=["setuptools", "twine", "click>=7.1.2", "openai", "python-dotenv"],
+    install_requires=["setuptools", "twine", "click>=7.1.2", "openai", "python-dotenv" , "termcolor"],
     python_requires=">=3.7",
     classifiers=[
         "Programming Language :: Python :: 3.8",
