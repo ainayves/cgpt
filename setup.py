@@ -29,6 +29,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        cgpt=cgpt:cli
+        cgpt=cgpt:tellme
     """,
 )
