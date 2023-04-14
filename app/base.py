@@ -90,20 +90,21 @@ class Base_CGPT:
             emoji_str = IA.encode('utf-8').decode('utf-8') if IA != "IA" else "IA"
 
             if len(result) > MAX_WIDTH - 4:
-                wrapped_result = textwrap.wrap(result, MAX_WIDTH - 4)
                 len_res = MAX_WIDTH - 4
             else:
-                wrapped_result = [result]
                 len_res = len(result)
 
-            
-            box = colored(top_left, color) + colored("─", color) * (len_res + 2) + emoji_str + "\n"
-            box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
-            for line in wrapped_result:
-                box += colored("│", color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3) + colored("│", color) + "\n"
+            wrapped_result = [result]
 
-            box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
-            box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) + colored(bottom_right, color)
+            
+            box = colored(top_left, color) + colored("─", color) * (len_res + 2) +  " " + emoji_str + "\n"
+            box += colored("│", color) + " " * (len_res + 2)  + "\n"
+            
+            for line in wrapped_result:
+                box += colored("│", color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3)  + "\n"
+            box += "\n"
+            box += colored("│", color) + " " * (len_res + 2) + "\n"
+            box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) 
 
             click.echo(box)
 
