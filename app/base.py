@@ -11,6 +11,8 @@ from app.utils.constant import (
     bottom_left,
     IA,
     stick,
+    BLANK,
+    assistant_color
 )
 from termcolor import colored
 
@@ -75,7 +77,8 @@ class Base_CGPT:
     def infinite_loop(self) -> None:
         while True:
             self._void_func()
-            client = input(self.input_text)
+            click.echo(BLANK)
+            client = input(colored(self.input_text, assistant_color))
             if client == self.exit_key:
                 break
 

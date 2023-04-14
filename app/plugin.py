@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os, click
+from termcolor import colored
 from typing import Union, List, Dict
 import openai
 from app.file_service import file_prompt
@@ -19,6 +20,7 @@ from app.utils.constant import (
     NOT_CONNECTED,
     TOO_MUCH_REQUEST,
     USER,
+    error_color
 )
 
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
@@ -44,15 +46,15 @@ def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
             res = None
 
     except openai.error.Timeout:
-        click.echo(OPENAI_REQUEST_TIMEOUT)
+        click.echo(colored(OPENAI_REQUEST_TIMEOUT,error_color))
         res = None
 
     except openai.error.APIConnectionError:
-        click.echo(NOT_CONNECTED)
+        click.echo(colored(NOT_CONNECTED, error_color))
         res = None
 
     except openai.error.RateLimitError:
-        click.echo(TOO_MUCH_REQUEST)
+        click.echo(colored(TOO_MUCH_REQUEST, error_color))
         res = None
 
     return res

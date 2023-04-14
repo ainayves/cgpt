@@ -9,29 +9,11 @@ from app.utils.constant import (
     CLIENT_PATH,
     CGPT_NETWORK,
     YOU_SERVER,
-    OPEN_TERMINAL,
-    VERSION,
+    OPEN_TERMINAL
 )
 
-
-@click.group()
-def cli():
-    pass
-
-
-@cli.command()
-@click.option("-n", "--name", type=str, help="Name to greet", default="World")
-def hello(name):
-    click.echo(f"Hello {name}")
-
-
-@cli.command()
-def version():
-    click.echo(VERSION)
-
-
-@cli.command()
-def tellme():
+@click.command()
+def cgpt():
     cgpt_path = os.path.abspath(os.path.dirname(__file__))
     use_in_lan = click.confirm(colored(CGPT_NETWORK, "yellow"))
 
