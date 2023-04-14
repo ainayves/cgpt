@@ -25,6 +25,7 @@ top_left = "╭"
 top_right = "╮"
 bottom_left = "╰"
 bottom_right = "╯"
+stick = "│"
 
 TEMPERATURE = 0.9
 MAX_TOKENS = 200

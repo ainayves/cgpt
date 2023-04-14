@@ -2,7 +2,7 @@ from typing import List, Dict
 import click, socket , textwrap
 from app.file_service import file_prompt
 from app.plugin import davinci
-from app.utils.constant import init_conversation, ASSISTANT , MAX_WIDTH, color , top_left, top_right , bottom_left, bottom_right , IA
+from app.utils.constant import init_conversation, ASSISTANT , MAX_WIDTH, color , top_left, top_right , bottom_left, bottom_right , IA , stick
 from termcolor import colored
 
 
@@ -98,12 +98,12 @@ class Base_CGPT:
 
             
             box = colored(top_left, color) + colored("─", color) * (len_res + 2) +  " " + emoji_str + "\n"
-            box += colored("│", color) + " " * (len_res + 2)  + "\n"
+            box += colored(stick, color) + " " * (len_res + 2)  + "\n"
             
             for line in wrapped_result:
-                box += colored("│", color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3)  + "\n"
-            box += "\n"
-            box += colored("│", color) + " " * (len_res + 2) + "\n"
+                box += colored(stick, color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3)  + "\n"
+            
+            box += colored(stick, color) + " " * (len_res + 2) + "\n"
             box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) 
 
             click.echo(box)
