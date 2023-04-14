@@ -97,7 +97,7 @@ class Base_CGPT:
                 len_res = len(result)
 
             
-            box = colored(top_left, color) + colored("─", color) * (len_res + 2) + colored(top_right, color) + "\n"
+            box = colored(top_left, color) + colored("─", color) * (len_res + 2) + emoji_str + "\n"
             box += colored("│", color) + " " * (len_res + 2) + colored("│", color) + "\n"
             for line in wrapped_result:
                 box += colored("│", color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3) + colored("│", color) + "\n"
