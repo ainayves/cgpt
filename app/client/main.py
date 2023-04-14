@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import ipaddress
-import socket, click
+import socket, click 
+from termcolor import colored
 from app.utils.constant import (
     UTF,
     IA,
@@ -12,6 +13,7 @@ from app.utils.constant import (
     DASHED,
     PORT,
     ADDRESS_NOT_VALID,
+    error_color
 )
 
 from app.utils.verify_env import _check_env_file
@@ -19,7 +21,7 @@ from app.base import Base_CGPT
 
 
 def main():
-    adresse_ip = click.prompt(ENTER_SERVER_IP)
+    adresse_ip = click.prompt(colored(ENTER_SERVER_IP, error_color))
 
     try:
         ipaddress.IPv4Address(adresse_ip)
@@ -43,9 +45,9 @@ def main():
 
         except OSError as e:
             if e.errno == 113:
-                click.echo(CONNECTION_IMPOSSIBLE)
+                click.echo(colored(CONNECTION_IMPOSSIBLE, error_color))
             else:
-                click.echo(CONNECTION_ERROR, e)
+                click.echo(colored(f"{CONNECTION_ERROR} {e}", error_color))
 
         finally:
             s.close()

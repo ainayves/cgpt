@@ -1,8 +1,10 @@
-from typing import Union, List, Dict
-import click, socket
+from typing import List, Dict
+import click, socket , textwrap
 from app.file_service import file_prompt
 from app.plugin import davinci
-from app.utils.constant import init_conversation, ASSISTANT
+from app.utils.constant import init_conversation, ASSISTANT , MAX_WIDTH, color , top_left, top_right , bottom_left, bottom_right , IA , stick
+from termcolor import colored
+
 
 
 class Base_CGPT:
@@ -82,8 +84,36 @@ class Base_CGPT:
             init_conversation.append({"role": ASSISTANT, "content": resp})
             if resp is None:
                 break
+            
+            result = resp
+            len_res = len(result)
+            emoji_str = IA.encode('utf-8').decode('utf-8') if IA != "IA" else "IA"
 
-            click.echo(self.decoration, color=True)
-            click.echo(f"<< {self.icon_ans} >> {resp}")
-            click.echo("\n")
-            click.echo(self.decoration, color=True)
+            if len(result) > MAX_WIDTH - 4:
+                len_res = MAX_WIDTH - 4
+            else:
+                len_res = len(result)
+
+            wrapped_result = [result]
+
+            
+            box = colored(top_left, color) + colored("─", color) * (len_res + 2) +  " " + emoji_str + "\n"
+            box += colored(stick, color) + " " * (len_res + 2)  + "\n"
+            
+            for line in wrapped_result:
+                box += colored(stick, color) + " " + colored(line) + " " * (MAX_WIDTH - len(line) - 3)  + "\n"
+            
+            box += colored(stick, color) + " " * (len_res + 2) + "\n"
+            box += colored(bottom_left, color) + colored("─", color) * (len_res + 2) 
+
+            click.echo(box)
+
+        
+
+
+
+
+            
+            
+
+           
