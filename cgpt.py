@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import click, os, subprocess 
+import click, os, subprocess
 from termcolor import colored
 from app.main import prompt
 from app.file_service import file_prompt

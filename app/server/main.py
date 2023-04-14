@@ -15,7 +15,7 @@ from app.utils.constant import (
     DECONNECTED_HOST,
     init_conversation,
     error_color,
-    color
+    color,
 )
 
 

@@ -7,7 +7,7 @@ from app.utils.constant import (
     API_KEY_ADDED,
     API_KEY_NOT_ADDED,
     STR_OPENAI_API_KEY,
-    color
+    color,
 )
 
 
@@ -19,7 +19,7 @@ def file_prompt() -> None:
         fichier.close()
         dotenv.set_key(".env", STR_OPENAI_API_KEY, api_key)
 
-        click.echo(colored(API_KEY_ADDED,color))
+        click.echo(colored(API_KEY_ADDED, color))
 
     elif api_key == "" or not api_key:
-        click.echo(colored(API_KEY_NOT_ADDED,color))
+        click.echo(colored(API_KEY_NOT_ADDED, color))

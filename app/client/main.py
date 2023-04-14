@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import ipaddress
-import socket, click 
+import socket, click
 from termcolor import colored
 from app.utils.constant import (
     UTF,
@@ -13,7 +13,7 @@ from app.utils.constant import (
     DASHED,
     PORT,
     ADDRESS_NOT_VALID,
-    error_color
+    error_color,
 )
 
 from app.utils.verify_env import _check_env_file
