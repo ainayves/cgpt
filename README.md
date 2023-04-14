@@ -38,22 +38,16 @@ Then , :
 ./build.sh
 ```
 
-### 😌 VERIFY IF IT IS CORRECTLY INSTALLED
-
-```
-cgpt hello
-```
-
 ### ⏯️ GET VERSION 
 
 ```
-cgpt version
+cgpt-version
 ```
 
 ### 🚀 RUN
 
 ```
-cgpt tellme
+cgpt
 ```
 
 ### 🔗 CGPT INSIDE A LOCAL NETWORK

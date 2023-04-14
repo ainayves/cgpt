@@ -4,3 +4,4 @@ click
 openai
 python-dotenv
 termcolor
+wheel

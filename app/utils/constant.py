@@ -22,12 +22,13 @@ else:
 init_conversation = [{"role": "system", "content": "You are a helpful assistant."}]
 color = "green"
 error_color = "yellow"
+assistant_color = "yellow"
 top_left = "╭"
 top_right = "╮"
 bottom_left = "╰"
 bottom_right = "╯"
 stick = "│"
-
+BLANK = "\n"
 TEMPERATURE = 0.9
 MAX_TOKENS = 200
 TOP_P = 1.0

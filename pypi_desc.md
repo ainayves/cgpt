@@ -15,22 +15,17 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 ```
 pip install cgpt
 ```
-### 😌 VERIFY IF IT IS CORRECTLY INSTALLED
-
-```
-cgpt hello
-```
 
 ### ⏯️ GET VERSION 
 
 ```
-cgpt version
+cgpt-version
 ```
 
 ### 🚀 RUN
 
 ```
-cgpt tellme
+cgpt
 ```
 
 ### 🔗 CGPT INSIDE A LOCAL NETWORK

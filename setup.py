@@ -20,7 +20,7 @@ setup(
     url="https://github.com/ainayves/cgpt>",
     long_description_content_type="text/markdown",
     py_modules=["cgpt", "app"],
-    packages=["app", "app.client", "app.server", "app.utils"],
+    packages=["app", "app.client", "app.server", "app.utils" , "app.commands"],
     install_requires=[
         "setuptools",
         "twine",
@@ -34,8 +34,10 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Operating System :: OS Independent",
     ],
-    entry_points="""
-        [console_scripts]
-        cgpt=cgpt:tellme
-    """,
+    entry_points={
+        'console_scripts': [
+            'cgpt=cgpt:cgpt',
+            'cgpt-version=app.commands.main:version'
+        ]
+    }
 )
