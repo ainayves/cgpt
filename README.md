@@ -1,5 +1,8 @@
 ![python](https://img.shields.io/badge/Python-3.7-blue.svg)
 ![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
+[![Build Status](https://github.com/ainayves/cgpt/workflows/Run%20tests/badge.svg)](https://github.com/ainayves/cgpt/actions?query=workflow%3A%22Run+tests%22+branch%3Amaster)
+[![codecov](https://codecov.io/gh/ainayves/cgpt/branch/master/graph/badge.svg)](https://codecov.io/gh/cruft/cruft)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 <center><h1>🌟 MAKE AI POWERED SEARCH INSIDE YOUR CLI 🌟</h1></center>
