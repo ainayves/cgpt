@@ -14,13 +14,13 @@ from app.utils.constant import (
     error_color,
     color,
     BOLD,
-    PYTHONSTR
+    PYTHONSTR,
 )
+
 
 @click.command()
 def cgpt():
-
-    click.echo(colored(WELCOME, color=color ,attrs=[BOLD]))
+    click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
 
     cgpt_path = os.path.abspath(os.path.dirname(__file__))
     use_in_lan = click.confirm(colored(CGPT_NETWORK, error_color))
