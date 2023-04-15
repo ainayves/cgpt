@@ -5,7 +5,7 @@
 ## Use openai chat-gpt inside your CLI
 </br>
 
-![cgpt](https://user-images.githubusercontent.com/66997516/231565742-4869c084-56f7-4443-9651-485990847536.gif)
+![cgpt1 1 28 (1)](https://user-images.githubusercontent.com/66997516/232239452-27e5c840-5699-44b8-bb28-da8d2dabc64f.gif)
 
 </br>
 
