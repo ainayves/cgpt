@@ -2,7 +2,7 @@
 ![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
 
 
-## Use openai chat-gpt inside your CLI
+<center><h1> MAKE AI POWERED SEARCH INSIDE YOUR CLI </h1></center>
 </br>
 
 ![cgpt1 1 28 (1)](https://user-images.githubusercontent.com/66997516/232239452-27e5c840-5699-44b8-bb28-da8d2dabc64f.gif)
