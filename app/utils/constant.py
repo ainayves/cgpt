@@ -1,6 +1,6 @@
 import platform
 
-VERSION = "1.1.27"
+VERSION = "1.1.28"
 
 os_name = platform.system()
 
@@ -57,7 +57,7 @@ OPEN_TERMINAL = f"Veuillez ouvrir un autre terminal..{RELEIVED}"
 SERVER_LIVE = "Serveur live sur "
 GET_API_KEY = "Ajoutez votre api key (invisible input) >"
 API_KEY_ADDED = (
-    "Votre API KEY a bien été ajouté , veuillez relancer la commande `cgpt tellme` "
+    "Votre API KEY a bien été ajouté , veuillez relancer la commande `cgpt` "
 )
 API_KEY_NOT_ADDED = "\n Vous n' avez pas ajouter un API KEY \n"
 SAY_SOMETHING = " Dîtes quelque chose (q : quitter , m : modifier api_key ) > "
