@@ -4,8 +4,8 @@
 name: Python application
 
 on:
-  branches:
-    - '*'
+  push:
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
