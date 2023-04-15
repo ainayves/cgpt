@@ -1,6 +1,6 @@
 ![python](https://img.shields.io/badge/Python-3.7-blue.svg)
 ![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
-![Build Status](https://img.shields.io/badge/Build%20status-Passing-green)](https://github.com/ainayves/cgpt/actions?query=workflow%3A%22Run+tests%22+branch%3Amaster)
+[![Build Status](https://img.shields.io/badge/Build%20status-Passing-green)](https://github.com/ainayves/cgpt/actions?query=workflow%3A%22Run+tests%22+branch%3Amaster)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
