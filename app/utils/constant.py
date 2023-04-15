@@ -1,8 +1,22 @@
 import platform
 
 VERSION = "1.1.28"
-
+SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
+
+WELCOME = f"""
+
+  /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$    
+ /$$__  $$ /$$__  $$| $$__  $$|__  $$__/ v{VERSION}     
+| $$  \__/| $$  \__/| $$  \ $$   | $$         
+| $$      | $$ /$$$$| $$$$$$$/   | $$         
+| $$      | $$|_  $$| $$____/    | $$         
+| $$    $$| $$  \ $$| $$         | $$         
+|  $$$$$$/|  $$$$$$/| $$         | $$         
+ \______/  \______/ |__/         |__/ {SUBTITLE}
+
+"""
+
 
 if os_name == "Linux" or os_name == "Darwin":
     IA = "🤖"
