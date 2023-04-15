@@ -12,7 +12,7 @@ from app.utils.constant import (
     IA,
     stick,
     BLANK,
-    assistant_color
+    assistant_color,
 )
 from termcolor import colored
 

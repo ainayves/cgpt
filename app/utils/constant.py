@@ -1,6 +1,6 @@
 import platform
 
-VERSION = "1.1.28"
+VERSION = "1.1.29"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
 
@@ -71,7 +71,7 @@ OPEN_TERMINAL = f"Please open another terminal..{RELEIVED}"
 SERVER_LIVE = "Server live on "
 GET_API_KEY = "Add your API key (invisible input) > "
 API_KEY_ADDED = (
-"Your API key has been successfully added, please restart the cgpt command."
+    "Your API key has been successfully added, please restart the cgpt command."
 )
 API_KEY_NOT_ADDED = "\nYou have not added an API key.\n"
 SAY_SOMETHING = "Say something (q: quit, m: modify api_key) > "
@@ -81,7 +81,9 @@ CONNECTION_IMPOSSIBLE = f"Connection impossible {SAD}"
 DASHED = "----------------------------------------------------------"
 DAVINCI_MODEL = "gpt-3.5-turbo"
 DAVINCI_PROMPT = "The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:"
-INCORRECT_API_KEY = "Your API key is incorrect. Type m to modify the key or q to quit > "
+INCORRECT_API_KEY = (
+    "Your API key is incorrect. Type m to modify the key or q to quit > "
+)
 OPENAI_REQUEST_TIMEOUT = "AI is asleep"
 NOT_CONNECTED = "You are not connected to the internet.."
 TOO_MUCH_REQUEST = "Too many requests"

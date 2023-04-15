@@ -20,7 +20,7 @@ from app.utils.constant import (
     NOT_CONNECTED,
     TOO_MUCH_REQUEST,
     USER,
-    error_color
+    error_color,
 )
 
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
@@ -46,7 +46,7 @@ def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
             res = None
 
     except openai.error.Timeout:
-        click.echo(colored(OPENAI_REQUEST_TIMEOUT,error_color))
+        click.echo(colored(OPENAI_REQUEST_TIMEOUT, error_color))
         res = None
 
     except openai.error.APIConnectionError:

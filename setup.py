@@ -20,7 +20,7 @@ setup(
     url="https://github.com/ainayves/cgpt>",
     long_description_content_type="text/markdown",
     py_modules=["cgpt", "app"],
-    packages=["app", "app.client", "app.server", "app.utils" , "app.commands"],
+    packages=["app", "app.client", "app.server", "app.utils", "app.commands"],
     install_requires=[
         "setuptools",
         "twine",
@@ -28,6 +28,7 @@ setup(
         "openai",
         "python-dotenv",
         "termcolor",
+        "pytest",
     ],
     python_requires=">=3.7",
     classifiers=[
@@ -35,9 +36,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     entry_points={
-        'console_scripts': [
-            'cgpt=cgpt:cgpt',
-            'cgpt-version=app.commands.main:version'
-        ]
-    }
+        "console_scripts": ["cgpt=cgpt:cgpt", "cgpt-version=app.commands.main:version"]
+    },
 )
