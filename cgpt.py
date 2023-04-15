@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import click, os, subprocess , gettext
+import click, os, subprocess
 from termcolor import colored
 from app.main import prompt
 from app.file_service import file_prompt
@@ -12,13 +12,15 @@ from app.utils.constant import (
     OPEN_TERMINAL,
     WELCOME,
     error_color,
-    color
+    color,
+    BOLD,
+    PYTHONSTR
 )
 
 @click.command()
 def cgpt():
 
-    click.echo(colored(WELCOME, color=color ,attrs=["bold"]))
+    click.echo(colored(WELCOME, color=color ,attrs=[BOLD]))
 
     cgpt_path = os.path.abspath(os.path.dirname(__file__))
     use_in_lan = click.confirm(colored(CGPT_NETWORK, error_color))
@@ -28,10 +30,10 @@ def cgpt():
 
         if endpoint:
             click.echo(colored(OPEN_TERMINAL, error_color))
-            subprocess.run(["python", cgpt_path + SERVER_PATH])
+            subprocess.run([PYTHONSTR, cgpt_path + SERVER_PATH])
 
         else:
-            subprocess.run(["python", cgpt_path + CLIENT_PATH])
+            subprocess.run([PYTHONSTR, cgpt_path + CLIENT_PATH])
 
     else:
         if not os.path.isfile(".env"):

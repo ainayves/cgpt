@@ -79,6 +79,7 @@ class Base_CGPT:
             self._void_func()
             click.echo(BLANK)
             client = input(colored(self.input_text, assistant_color))
+            click.echo(BLANK)
             if client == self.exit_key:
                 break
 
