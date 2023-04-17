@@ -1,4 +1,4 @@
-import pytest , openai , os , io
+import openai , os , io
 from app.plugin import davinci
 from dotenv import load_dotenv
 load_dotenv()

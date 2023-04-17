@@ -1,5 +1,5 @@
 import os
-from app.file_service import file_prompt
+from app.create_env import file_prompt
 
 
 def _check_env_file(self):

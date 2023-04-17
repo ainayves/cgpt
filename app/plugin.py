@@ -4,7 +4,7 @@ import os, click
 from termcolor import colored
 from typing import Union, List, Dict
 import openai
-from app.file_service import file_prompt
+from app.create_env import file_prompt
 from dotenv import load_dotenv
 
 load_dotenv()

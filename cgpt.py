@@ -3,7 +3,7 @@
 import click, os, subprocess
 from termcolor import colored
 from app.main import prompt
-from app.file_service import file_prompt
+from app.create_env import file_prompt
 from app.utils.constant import (
     SERVER_PATH,
     CLIENT_PATH,
