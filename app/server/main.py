@@ -44,17 +44,16 @@ def threaded(c):
 
 
 def main(port, ip_address=None):
-
     if ip_address is None:
-
         auto_detcted_ip = socket.gethostbyname(socket.gethostname())
-        server_socket = socket.create_server((auto_detcted_ip , int(port)), reuse_port=False)
+        server_socket = socket.create_server(
+            (auto_detcted_ip, int(port)), reuse_port=False
+        )
         server_socket.listen()
         click.echo(colored(f"{SERVER_LIVE} {auto_detcted_ip} ..{LIVE}", color))
-        
-    else:
 
-        server_socket = socket.create_server((ip_address , int(port)), reuse_port=False)
+    else:
+        server_socket = socket.create_server((ip_address, int(port)), reuse_port=False)
         server_socket.listen()
 
     while True:

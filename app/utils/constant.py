@@ -1,4 +1,4 @@
-import platform
+import platform, os
 
 VERSION = "1.1.30"
 SUBTITLE = ">>> Make AI powered search inside your CLI"

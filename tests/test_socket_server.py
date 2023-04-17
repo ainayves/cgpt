@@ -3,8 +3,8 @@ import threading
 from app.server.main import main
 from app.utils.constant import PING, PONG
 
+
 def test_main_server():
-    
     port = 1234
     ip_address = socket.gethostbyname(socket.gethostname())
 
@@ -25,8 +25,3 @@ def test_main_server():
 
     # Verify that the server responded correctly
     assert response == PONG
-
-    
-
-    
-    
