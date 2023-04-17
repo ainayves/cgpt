@@ -1,6 +1,6 @@
-import platform
+import platform, os
 
-VERSION = "1.1.29"
+VERSION = "1.1.30"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
 
@@ -92,3 +92,5 @@ ADDRESS_NOT_VALID = f"The IP address is not valid {NO_ENTRY}"
 DECONNECTED_HOST = "A host has disconnected."
 BOLD = "bold"
 PYTHONSTR = "python"
+PING = "PING"
+PONG = "PONG"

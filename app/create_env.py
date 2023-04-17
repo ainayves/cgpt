@@ -11,13 +11,16 @@ from app.utils.constant import (
 )
 
 
-def file_prompt() -> None:
+def file_prompt(output_path=None) -> None:
     api_key = getpass.getpass(GET_API_KEY)
 
+    if output_path is None:
+        output_path = ""
+
     if api_key:
-        fichier = open(".env", "w")
+        fichier = open(output_path + ".env", "w")
         fichier.close()
-        dotenv.set_key(".env", STR_OPENAI_API_KEY, api_key)
+        dotenv.set_key(output_path + ".env", STR_OPENAI_API_KEY, api_key)
 
         click.echo(colored(API_KEY_ADDED, color))
 

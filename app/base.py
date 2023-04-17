@@ -1,6 +1,6 @@
 from typing import List, Dict
 import click, socket
-from app.file_service import file_prompt
+from app.create_env import file_prompt
 from app.plugin import davinci
 from app.utils.constant import (
     init_conversation,

@@ -2,7 +2,7 @@
 *.pyc
 __pycache__
 /venv
-.env
+/.env
 .vscode
 *.egg-info
 /build

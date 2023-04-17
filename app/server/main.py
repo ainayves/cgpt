@@ -12,6 +12,8 @@ from app.utils.constant import (
     SERVER_LIVE,
     UTF,
     LIVE,
+    PING,
+    PONG,
     DECONNECTED_HOST,
     init_conversation,
     error_color,
@@ -24,6 +26,9 @@ def threaded(c):
     while True:
         try:
             client_data = c.recv(1024).decode()
+
+            if client_data == PING:
+                c.send(PONG.encode(encoding=UTF))
 
             api_response = davinci(client_data, init_conversation_client)
             if api_response is not None:
@@ -38,15 +43,23 @@ def threaded(c):
             click.echo(colored(DECONNECTED_HOST, error_color))
 
 
-def main():
-    adresse_ip = socket.gethostbyname(socket.gethostname())
-    server_socket = socket.create_server((adresse_ip, int(PORT)), reuse_port=False)
-    server_socket.listen()
-    click.echo(colored(f"{SERVER_LIVE} {adresse_ip} ..{LIVE}", color))
+def main(port, ip_address=None):
+    if ip_address is None:
+        auto_detcted_ip = socket.gethostbyname(socket.gethostname())
+        server_socket = socket.create_server(
+            (auto_detcted_ip, int(port)), reuse_port=False
+        )
+        server_socket.listen()
+        click.echo(colored(f"{SERVER_LIVE} {auto_detcted_ip} ..{LIVE}", color))
+
+    else:
+        server_socket = socket.create_server((ip_address, int(port)), reuse_port=False)
+        server_socket.listen()
+
     while True:
         client, _ = server_socket.accept()
         threading.Thread(target=threaded, args=(client,), daemon=True).start()
 
 
 if __name__ == "__main__":
-    main()
+    main(PORT, None)
