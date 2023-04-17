@@ -14,7 +14,7 @@ from app.utils.constant import (
     error_color,
     color,
     BOLD,
-    PYTHONSTR
+    PYTHONSTR,
 )
 
 
