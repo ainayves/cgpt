@@ -12,8 +12,11 @@ COPY . /cgpt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # create a shell script that will invoke the `cgpt()` function
-RUN echo '#!/bin/sh\npython -m cgpt "$@"' > /cgpt/cgpt.sh && \
+RUN echo '#!/bin/sh\n cgpt "$@"' > /cgpt/cgpt.sh && \
     chmod +x /cgpt/cgpt.sh
+
+RUN python setup.py develop
+RUN python setup.py sdist bdist_wheel
 
 # set the entrypoint to the shell script
 ENTRYPOINT ["/cgpt/cgpt.sh"]
