@@ -28,7 +28,7 @@ setup(
         "openai",
         "python-dotenv",
         "termcolor",
-        "pytest",
+        "wheel",
     ],
     python_requires=">=3.7",
     classifiers=[

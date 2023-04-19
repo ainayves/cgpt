@@ -1,3 +1,3 @@
 #!/bin/sh
-python setup.py --quiet develop
-python setup.py --quiet sdist bdist_wheel
+python setup.py develop
+python setup.py sdist bdist_wheel
