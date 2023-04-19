@@ -3,6 +3,12 @@
 ## Use openai chat-gpt on your CLI
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
+### ⭐ FEATURES
+
+- AI conversation exactly the same as in openai website
+- LAN support (you can use cgpt inside a LAN)
+- Docker support
+
 ### REQUIREMENTS
 
 - python >=3.7
