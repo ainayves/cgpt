@@ -48,6 +48,12 @@ NOTES :
 
 - A `client` can also use his own api_key in the next version.
 
+### 🐋 RUN INSIDE DOCKER
+
+```
+docker-compose run --rm app
+```
+
 ### GITHUB
 
 - [cgpt](https://github.com/ainayves/cgpt/)
