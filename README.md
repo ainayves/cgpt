@@ -19,7 +19,7 @@
 
 </br>
 
-### DESCRIPTION ?
+### DESCRIPTION
 
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
