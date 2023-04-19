@@ -13,25 +13,25 @@
 
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
-### ⭐ FEATURES
+# ⭐ FEATURES
 
-- [AI conversation exactly the same as in openai website](#requirements)
-- [LAN support](#cgpt-inside-a-local-network)
-- [Docker support](#run-inside-docker)
+- [AI conversation exactly the same as in openai website](#question-requirements)
+- [LAN support](#link-cgpt-inside-a-local-network)
+- [Docker support](#whale2-run-inside-docker)
 
-### ❓ REQUIREMENTS
+# :question: REQUIREMENTS
 
 - python >=3.7
 - openai API KEY : 
 You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### 💻 SETUP
+# 💻 SETUP
 
 ```
 pip install -r requirements.txt
 ```
 
-### 🔨 BUILD
+# 🔨 BUILD
 
 - For this part , it is better to use Linux.
 
@@ -46,19 +46,19 @@ Then , :
 ./build.sh
 ```
 
-### ⏯️ GET VERSION 
+# ⏯️ GET VERSION 
 
 ```
 cgpt-version
 ```
 
-### 🚀 RUN
+# 🚀 RUN
 
 ```
 cgpt
 ```
 
-### 🔗 CGPT INSIDE A LOCAL NETWORK
+# :link: CGPT INSIDE A LOCAL NETWORK
 
 You can use cgpt inside a LAN. 
 
@@ -78,7 +78,7 @@ NOTES :
 
 - A `client` can also use his own api_key in the next version.
 
-### 🐋 RUN INSIDE DOCKER
+### :whale2: RUN INSIDE DOCKER
 
 - To make it easier , use the `docker-compose.yml` file : 
 
