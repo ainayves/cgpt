@@ -2,7 +2,7 @@ version: "3.8"
 services:
   app:
     build: .
-    image: ainayves/cgpt:latest
+    image: ainayves/cgpt
     volumes:
       - ./data:/home/app_user/data
     stdin_open: true

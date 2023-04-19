@@ -80,6 +80,8 @@ NOTES :
 
 ### 🐋 RUN INSIDE DOCKER
 
+- To make it easier , use the `docker-compose.yml` file : 
+
 ```
 docker-compose run --rm app
 ```
