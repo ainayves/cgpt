@@ -22,7 +22,7 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 pip install cgpt
 ```
 
-### ⏯️ GET VERSION 
+### ⏯️ VERIFY INSTALLATION 
 
 ```
 cgpt-version

@@ -48,7 +48,7 @@ Then , :
 ./build.sh
 ```
 
-### ⏯️ GET VERSION 
+### ⏯️ VERIFY INSTALLATION 
 
 ```
 cgpt-version
