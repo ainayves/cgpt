@@ -15,9 +15,9 @@
 
 ### ⭐ FEATURES
 
-- [AI conversation exactly the same as in openai website](#❓-requirements)
-- [LAN support](#🔗-cgpt-inside-a-local-network)
-- [Docker support](#🐋-run-inside-docker)
+- [AI conversation exactly the same as in openai website](#requirements)
+- [LAN support](#cgpt-inside-a-local-network)
+- [Docker support](#run-inside-docker)
 
 ### ❓ REQUIREMENTS
 
