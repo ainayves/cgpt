@@ -4,7 +4,7 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
-<center><h1>🌟 MAKE AI POWERED SEARCH INSIDE YOUR CLI 🌟</h1></center>
+<center><h1>🤖 MAKE AI POWERED SEARCH INSIDE YOUR CLI 💻</h1></center>
 </br>
 
 ### ⭐ FEATURES
@@ -27,7 +27,7 @@
 - openai API KEY : 
 You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### 💻 SETUP
+### 🖥️ SETUP
 
 ```
 pip install -r requirements.txt
