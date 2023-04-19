@@ -9,7 +9,7 @@
 
 ### ⭐ FEATURES
 
-- [AI conversation exactly the same as in openai website](#question-requirements)
+- [AI conversation exactly the same as in openai website](#thinking-face-what-is-this-module-?)
 - [LAN support](#link-cgpt-inside-a-local-network)
 - [Docker support](#whale2-run-inside-docker)
 
@@ -18,6 +18,8 @@
 ![cgpt1 1 28 (1)](https://user-images.githubusercontent.com/66997516/232239452-27e5c840-5699-44b8-bb28-da8d2dabc64f.gif)
 
 </br>
+
+### :thinking_face: What is this module ?
 
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
