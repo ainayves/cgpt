@@ -27,8 +27,7 @@ setup(
         "click>=7.1.2",
         "openai",
         "python-dotenv",
-        "termcolor",
-        "wheel",
+        "termcolor"
     ],
     python_requires=">=3.7",
     classifiers=[
