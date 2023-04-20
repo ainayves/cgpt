@@ -11,7 +11,7 @@
 
 - [AI conversation exactly the same as in openai website](#description)
 - [LAN support](#link-cgpt-inside-a-local-network)
-- [Docker support](#whale2-run-inside-docker)
+- [Docker support](#whale2-build-and-run-with-docker)
 
 </br>
 
