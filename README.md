@@ -82,7 +82,7 @@ NOTES :
 
 - A `client` can also use his own api_key in the next version.
 
-### :whale2: RUN INSIDE DOCKER
+### :whale2: BUILD AND RUN WITH DOCKER
 
 - To make it easier , use the `docker-compose.yml` file : 
 
