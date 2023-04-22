@@ -7,7 +7,6 @@
 
 - AI conversation exactly the same as in openai website
 - LAN support (you can use cgpt inside a LAN)
-- Docker support
 
 ### REQUIREMENTS
 
@@ -54,13 +53,6 @@ NOTES :
 
 - A `client` can also use his own api_key in the next version.
 
-### 🐋 RUN INSIDE DOCKER
-
-- To make it easier , use the `docker-compose.yml` file : 
-
-```
-docker-compose run --rm app
-```
 
 ### GITHUB
 
