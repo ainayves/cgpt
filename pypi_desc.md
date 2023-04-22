@@ -3,6 +3,12 @@
 ## Use openai chat-gpt on your CLI
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
+### ⭐ FEATURES
+
+- AI conversation exactly the same as in openai website
+- LAN support (you can use cgpt inside a LAN)
+- Docker support
+
 ### REQUIREMENTS
 
 - python >=3.7
@@ -16,7 +22,7 @@ You need to register on openai to receive your own api key , here : [api_key](ht
 pip install cgpt
 ```
 
-### ⏯️ GET VERSION 
+### ⏯️ VERIFY INSTALLATION 
 
 ```
 cgpt-version
@@ -47,6 +53,14 @@ NOTES :
 ```
 
 - A `client` can also use his own api_key in the next version.
+
+### 🐋 RUN INSIDE DOCKER
+
+- To make it easier , use the `docker-compose.yml` file : 
+
+```
+docker-compose run --rm app
+```
 
 ### GITHUB
 

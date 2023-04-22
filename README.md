@@ -4,22 +4,32 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
-<center><h1>🌟 MAKE AI POWERED SEARCH INSIDE YOUR CLI 🌟</h1></center>
+<center><h1>🤖 MAKE AI POWERED SEARCH INSIDE YOUR CLI 💻</h1></center>
+</br>
+
+### ⭐ FEATURES
+
+- [AI conversation exactly the same as in openai website](#description)
+- [LAN support](#link-cgpt-inside-a-local-network)
+- [Docker support](#whale2-build-and-run-with-docker)
+
 </br>
 
 ![cgpt1 1 28 (1)](https://user-images.githubusercontent.com/66997516/232239452-27e5c840-5699-44b8-bb28-da8d2dabc64f.gif)
 
 </br>
 
+### DESCRIPTION
+
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
-### ❓ REQUIREMENTS
+### :question: REQUIREMENTS
 
 - python >=3.7
 - openai API KEY : 
 You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### 💻 SETUP
+### 🖥️ SETUP
 
 ```
 pip install -r requirements.txt
@@ -40,7 +50,7 @@ Then , :
 ./build.sh
 ```
 
-### ⏯️ GET VERSION 
+### ⏯️ VERIFY INSTALLATION 
 
 ```
 cgpt-version
@@ -52,7 +62,7 @@ cgpt-version
 cgpt
 ```
 
-### 🔗 CGPT INSIDE A LOCAL NETWORK
+### :link: CGPT INSIDE A LOCAL NETWORK
 
 You can use cgpt inside a LAN. 
 
@@ -71,6 +81,14 @@ NOTES :
 ```
 
 - A `client` can also use his own api_key in the next version.
+
+### :whale2: BUILD AND RUN WITH DOCKER
+
+- To make it easier , use the `docker-compose.yml` file : 
+
+```
+docker-compose run --rm app
+```
 
 ### 💚 Feedback
 
