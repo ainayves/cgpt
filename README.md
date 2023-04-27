@@ -91,6 +91,14 @@ NOTES :
 docker-compose run --rm app
 ```
 
+### pypi
+
+You can also install the latest version from pypi.
+
+```
+pip install cgpt
+```
+
 ### 💚 Feedback
 
 Please feel free to leave feedback in issues/PRs.
