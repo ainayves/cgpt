@@ -24,13 +24,22 @@
 
 `cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
 
+
 ### :question: REQUIREMENTS
 
 - python >=3.7
 - openai API KEY : 
 You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### 🖥️ SETUP
+### INSTALL FROM PYPI
+
+You can install the latest version from pypi.
+
+```
+pip install cgpt
+```
+
+### 🖥️ SETUP FOR DEVLOPPERS
 
 ```
 pip install -r requirements.txt
@@ -89,14 +98,6 @@ NOTES :
 
 ```
 docker-compose run --rm app
-```
-
-### pypi
-
-You can also install the latest version from pypi.
-
-```
-pip install cgpt
 ```
 
 ### 💚 Feedback
