@@ -20,9 +20,10 @@
 
 </br>
 
-### DESCRIPTION
+### DESCRIPTIONS
 
-`cgpt` is a Python package that allows you to use AI directly in your favorite Terminal. It is based on [CLICK](https://github.com/pallets/click) package for creating beautiful command line interfaces in a composable way.
+- `cgpt` is a Python package that allows you to use AI directly in your favorite Terminal. 
+- `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
 
 ### :question: REQUIREMENTS
