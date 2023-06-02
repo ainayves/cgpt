@@ -39,7 +39,7 @@ You can install the latest version from pypi.
 pip install cgpt
 ```
 
-### 🖥️ SETUP FOR DEVLOPPERS
+### 🖥️ SETUP FOR DEVELOPPERS
 
 ```
 pip install -r requirements.txt
