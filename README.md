@@ -22,7 +22,7 @@
 
 ### DESCRIPTION
 
-`cgpt` is a Python module that allows you to use Chat-GPT directly in your favorite Terminal.
+`cgpt` is a Python module that allows you to use AI directly in your favorite Terminal. This package is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
 
 ### :question: REQUIREMENTS
