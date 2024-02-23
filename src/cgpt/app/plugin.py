@@ -5,9 +5,9 @@ import click
 from termcolor import colored
 from typing import Union, List, Dict
 import openai
-from .create_env import file_prompt
+from cgpt.app.create_env import file_prompt
 from dotenv import load_dotenv
-from .utils.constant import (
+from cgpt.app.utils.constant import (
     AI_COLON,
     CHOICES,
     STR_OPENAI_API_KEY,
@@ -21,6 +21,7 @@ from .utils.constant import (
     USER,
     error_color,
 )
+
 load_dotenv()
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
@@ -34,28 +35,29 @@ def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
 
         res = response[CHOICES][0][MESSAGE][CONTENT].replace(AI_COLON, "")
 
-    # except openai.error.AuthenticationError:
-    #     modify_apikey = input(INCORRECT_API_KEY)
+    except openai.error.AuthenticationError:
+        modify_apikey = input(INCORRECT_API_KEY)
 
-    #     if modify_apikey == "m":
-    #         file_prompt()
-    #         res = None
+        if modify_apikey == "m":
+            file_prompt()
+            res = None
 
-    #     else:
-    #         res = None
+        else:
+            res = None
 
-    # except openai.error.Timeout:
-    #     click.echo(colored(OPENAI_REQUEST_TIMEOUT, error_color))
-    #     res = None
-
-    # except openai.error.APIConnectionError:
-    #     click.echo(colored(NOT_CONNECTED, error_color))
-    #     res = None
-
-    # except openai.error.RateLimitError:
-    #     click.echo(colored(TOO_MUCH_REQUEST, error_color))
-    #     res = None
-    except openai.BadRequestError as e:
-        print(e)
+    except openai.error.Timeout:
+        click.echo(colored(OPENAI_REQUEST_TIMEOUT, error_color))
         res = None
+
+    except openai.error.APIConnectionError:
+        click.echo(colored(NOT_CONNECTED, error_color))
+        res = None
+
+    except openai.error.RateLimitError:
+        click.echo(colored(TOO_MUCH_REQUEST, error_color))
+        res = None
+
+    # except openai.BadRequestError as e:
+    #     print(e)
+    #     res = None
     return res

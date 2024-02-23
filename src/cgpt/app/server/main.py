@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import socket, click
-from _thread import *
+import socket
+import click
+from _thread import *  # noqa: F403
 import threading
 from termcolor import colored
-
-print_lock = threading.Lock()
-from ..plugin import davinci
-from ..utils.constant import (
+from cgpt.app.plugin import davinci
+from cgpt.app.utils.constant import (
     PORT,
     SERVER_LIVE,
     UTF,
@@ -19,6 +18,8 @@ from ..utils.constant import (
     error_color,
     color,
 )
+
+print_lock = threading.Lock()
 
 
 def threaded(c):

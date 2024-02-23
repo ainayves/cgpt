@@ -1,8 +1,9 @@
 from typing import List, Dict
-import click, socket
-from .create_env import file_prompt
-from .plugin import davinci
-from .utils.constant import (
+import click
+import socket
+from cgpt.app.create_env import file_prompt
+from cgpt.app.plugin import davinci
+from cgpt.app.utils.constant import (
     init_conversation,
     ASSISTANT,
     MAX_WIDTH,

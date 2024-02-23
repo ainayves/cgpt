@@ -17,9 +17,9 @@ import click
 import os
 import subprocess
 from termcolor import colored
-from .app.main import prompt
-from .app.create_env import file_prompt
-from .app.utils.constant import (
+from cgpt.app.main import prompt
+from cgpt.app.create_env import file_prompt
+from cgpt.app.utils.constant import (
     SERVER_PATH,
     CLIENT_PATH,
     CGPT_NETWORK,

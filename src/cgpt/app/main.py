@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from .utils.constant import SAY_SOMETHING, DASHED, UTF, IA
+from cgpt.app.utils.constant import SAY_SOMETHING, DASHED, UTF, IA
 
-from .base import Base_CGPT
+from cgpt.app.base import Base_CGPT
 
 
 def prompt() -> None:

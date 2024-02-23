@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import ipaddress
-import socket, click
+import socket
+import click
 from termcolor import colored
-from ..utils.constant import (
+from cgpt.app.utils.constant import (
     UTF,
     IA,
     SAY_SOMETHING,
@@ -16,8 +17,8 @@ from ..utils.constant import (
     error_color,
 )
 
-from ..utils.verify_env import _check_env_file
-from ..base import Base_CGPT
+from cgpt.app.utils.verify_env import _check_env_file
+from cgpt.app.base import Base_CGPT
 
 
 def main():

@@ -1,5 +1,5 @@
 import os
-from ..create_env import file_prompt
+from cgpt.app.create_env import file_prompt
 
 
 def _check_env_file(self):

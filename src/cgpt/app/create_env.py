@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import click, os, getpass, dotenv
+import click
+import getpass
+import dotenv
 from termcolor import colored
-from .utils.constant import (
+from cgpt.app.utils.constant import (
     GET_API_KEY,
     API_KEY_ADDED,
     API_KEY_NOT_ADDED,

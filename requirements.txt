@@ -7,3 +7,5 @@ python-dotenv
 termcolor
 wheel
 pytest
+nox
+nox-poetry
