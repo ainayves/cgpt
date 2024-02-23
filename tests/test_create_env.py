@@ -21,7 +21,7 @@ def test_file_prompt(monkeypatch):
 
     file_prompt(file_path)
 
-    assert env_file.is_file() == True
+    assert env_file.is_file() == True  # noqa: E712
     with env_file.open("r") as f:
         env_data = f.read()
     assert f"{STR_OPENAI_API_KEY}={expected_api_key}" in env_data.replace(

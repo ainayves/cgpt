@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "Cgpt"
 author = "Aina Yves"
 copyright = "2024, Aina Yves"

@@ -9,7 +9,18 @@ from dotenv import load_dotenv
 from termcolor import colored
 
 from cgpt.app.create_env import file_prompt
-from . import *
+from cgpt.app.utils.constant import AI_COLON
+from cgpt.app.utils.constant import CHOICES
+from cgpt.app.utils.constant import CONTENT
+from cgpt.app.utils.constant import DAVINCI_MODEL
+from cgpt.app.utils.constant import INCORRECT_API_KEY
+from cgpt.app.utils.constant import MESSAGE
+from cgpt.app.utils.constant import NOT_CONNECTED
+from cgpt.app.utils.constant import OPENAI_REQUEST_TIMEOUT
+from cgpt.app.utils.constant import STR_OPENAI_API_KEY
+from cgpt.app.utils.constant import TOO_MUCH_REQUEST
+from cgpt.app.utils.constant import USER
+from cgpt.app.utils.constant import error_color
 
 
 load_dotenv()

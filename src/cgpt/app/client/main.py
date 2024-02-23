@@ -5,12 +5,20 @@ import click
 from termcolor import colored
 
 from cgpt.app.base import Base_CGPT
-
+from cgpt.app.utils.constant import ADDRESS_NOT_VALID
+from cgpt.app.utils.constant import CONNECTION_ERROR
+from cgpt.app.utils.constant import CONNECTION_IMPOSSIBLE
+from cgpt.app.utils.constant import DASHED
+from cgpt.app.utils.constant import ENTER_SERVER_IP
+from cgpt.app.utils.constant import IA
+from cgpt.app.utils.constant import PORT
+from cgpt.app.utils.constant import SAY_SOMETHING
+from cgpt.app.utils.constant import UTF
+from cgpt.app.utils.constant import error_color
 from cgpt.app.utils.verify_env import _check_env_file
-from . import *
 
 
-def main():
+def main() -> None:
     adresse_ip = click.prompt(colored(ENTER_SERVER_IP, error_color))
 
     try:

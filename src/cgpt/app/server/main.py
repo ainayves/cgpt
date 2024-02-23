@@ -1,17 +1,27 @@
 import socket
 import threading
 from _thread import *  # noqa: F403
-from . import *
+
 import click
 from termcolor import colored
 
 from cgpt.app.plugin import davinci
+from cgpt.app.utils.constant import DECONNECTED_HOST
+from cgpt.app.utils.constant import LIVE
+from cgpt.app.utils.constant import PING
+from cgpt.app.utils.constant import PONG
+from cgpt.app.utils.constant import PORT
+from cgpt.app.utils.constant import SERVER_LIVE
+from cgpt.app.utils.constant import UTF
+from cgpt.app.utils.constant import color
+from cgpt.app.utils.constant import error_color
+from cgpt.app.utils.constant import init_conversation
 
 
 print_lock = threading.Lock()
 
 
-def threaded(c):
+def threaded(c) -> None:
     init_conversation_client = init_conversation
     while True:
         try:
@@ -33,12 +43,10 @@ def threaded(c):
             click.echo(colored(DECONNECTED_HOST, error_color))
 
 
-def main(port, ip_address=None):
+def main(port: int, ip_address=None) -> None:
     if ip_address is None:
         auto_detcted_ip = socket.gethostbyname(socket.gethostname())
-        server_socket = socket.create_server(
-            (auto_detcted_ip, int(port)), reuse_port=False
-        )
+        server_socket = socket.create_server((auto_detcted_ip, port), reuse_port=False)
         server_socket.listen()
         click.echo(colored(f"{SERVER_LIVE} {auto_detcted_ip} ..{LIVE}", color))
 

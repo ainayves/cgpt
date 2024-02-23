@@ -1,5 +1,8 @@
 from cgpt.app.base import Base_CGPT
-from . import *
+from cgpt.app.utils.constant import DASHED
+from cgpt.app.utils.constant import IA
+from cgpt.app.utils.constant import SAY_SOMETHING
+from cgpt.app.utils.constant import UTF
 
 
 def prompt() -> None:

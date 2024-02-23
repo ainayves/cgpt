@@ -1,18 +1,3 @@
-# """Command-line interface."""
-# import click
-
-
-# @click.command()
-# @click.version_option()
-# def main() -> None:
-#     """Cgpt."""
-
-
-# if __name__ == "__main__":
-#     main(prog_name="cgpt")  # pragma: no cover
-
-# -*- coding: utf-8 -*-
-
 import os
 import subprocess
 
@@ -34,7 +19,7 @@ from cgpt.app.utils.constant import error_color
 
 
 @click.command()
-def cgpt():
+def cgpt() -> None:
     click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
 
     cgpt_path = os.path.abspath(os.path.dirname(__file__))

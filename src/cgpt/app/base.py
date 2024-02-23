@@ -1,17 +1,26 @@
 import socket
 from typing import Dict
 from typing import List
+from typing import Optional
 
 import click
 from termcolor import colored
 
 from cgpt.app.create_env import file_prompt
 from cgpt.app.plugin import davinci
-from . import *
+from cgpt.app.utils.constant import ASSISTANT
+from cgpt.app.utils.constant import BLANK
+from cgpt.app.utils.constant import IA
+from cgpt.app.utils.constant import MAX_WIDTH
+from cgpt.app.utils.constant import assistant_color
+from cgpt.app.utils.constant import bottom_left
+from cgpt.app.utils.constant import color
+from cgpt.app.utils.constant import init_conversation
+from cgpt.app.utils.constant import stick
+from cgpt.app.utils.constant import top_left
 
 
 class Base_CGPT:
-
     """
     Baseclass to create a conversational infinite-loop with CGPT module
     """
@@ -36,7 +45,7 @@ class Base_CGPT:
         self.socket_resp = socket_resp
         self.socket_instance = socket_instance
 
-    def _anonym_func(self, *args):
+    def _anonym_func(self, *args) -> None:
         return args[0]
 
     def _void_func(self) -> None:

@@ -1,8 +1,8 @@
 import click
 
-from . import *
+from cgpt.app.utils.constant import VERSION
 
 
 @click.command()
-def version():
+def version() -> None:
     click.echo(VERSION)
