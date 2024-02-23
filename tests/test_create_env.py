@@ -1,8 +1,10 @@
 import getpass
 import os
+from pathlib import Path
+
 from cgpt.app.create_env import file_prompt
 from cgpt.app.utils.constant import STR_OPENAI_API_KEY
-from pathlib import Path
+
 
 file_path = os.path.dirname(os.path.abspath(__file__))
 

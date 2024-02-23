@@ -1,5 +1,6 @@
 import click
-from cgpt.app.utils.constant import VERSION
+
+from . import *
 
 
 @click.command()

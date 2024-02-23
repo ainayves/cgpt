@@ -1,16 +1,10 @@
-# -*- coding: utf-8 -*-
+import getpass
 
 import click
-import getpass
 import dotenv
 from termcolor import colored
-from cgpt.app.utils.constant import (
-    GET_API_KEY,
-    API_KEY_ADDED,
-    API_KEY_NOT_ADDED,
-    STR_OPENAI_API_KEY,
-    color,
-)
+
+from . import *
 
 
 def file_prompt(output_path=None) -> None:

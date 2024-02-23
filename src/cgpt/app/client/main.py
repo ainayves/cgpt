@@ -1,24 +1,13 @@
-# -*- coding: utf-8 -*-
-
 import ipaddress
 import socket
+
 import click
 from termcolor import colored
-from cgpt.app.utils.constant import (
-    UTF,
-    IA,
-    SAY_SOMETHING,
-    ENTER_SERVER_IP,
-    CONNECTION_ERROR,
-    CONNECTION_IMPOSSIBLE,
-    DASHED,
-    PORT,
-    ADDRESS_NOT_VALID,
-    error_color,
-)
+
+from cgpt.app.base import Base_CGPT
 
 from cgpt.app.utils.verify_env import _check_env_file
-from cgpt.app.base import Base_CGPT
+from . import *
 
 
 def main():

@@ -4,7 +4,6 @@
 [![Build Status](https://img.shields.io/badge/Build%20status-Passing-green)](https://github.com/ainayves/cgpt/actions)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-
 <center><h1>🤖 MAKE AI POWERED SEARCH INSIDE YOUR CLI 💻</h1></center>
 </br>
 
@@ -22,15 +21,14 @@
 
 ### DESCRIPTIONS
 
-- `cgpt` is a Python package that allows you to use AI directly in your favorite Terminal. 
+- `cgpt` is a Python package that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
-
 
 ### :question: REQUIREMENTS
 
 - python >=3.7
-- openai API KEY : 
-You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
+- openai API KEY :
+  You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
 ### INSTALL FROM PYPI
 
@@ -55,13 +53,14 @@ If you are on Linux , launch:
 ```
 sudo chmod +x build.sh
 ```
+
 Then , :
 
 ```
 ./build.sh
 ```
 
-### ⏯️ VERIFY INSTALLATION 
+### ⏯️ VERIFY INSTALLATION
 
 ```
 cgpt-version
@@ -75,14 +74,14 @@ cgpt
 
 ### :link: CGPT INSIDE A LOCAL NETWORK
 
-You can use cgpt inside a LAN. 
+You can use cgpt inside a LAN.
 
 - You just need one Host (`connected to internet`) to be the server.
-- Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`. 
+- Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`.
 
-NOTES : 
+NOTES :
 
-- For now , a server must be launched inside a `Linux` computer . If the server is inside `Windows` : the address is sometimes wrong (to be fixed in the next version). 
+- For now , a server must be launched inside a `Linux` computer . If the server is inside `Windows` : the address is sometimes wrong (to be fixed in the next version).
 
 - Also , make sure that your `/etc/hosts` is configured correctly like :
 
@@ -95,7 +94,7 @@ NOTES :
 
 ### :whale2: BUILD AND RUN WITH DOCKER
 
-- To make it easier , use the `docker-compose.yml` file : 
+- To make it easier , use the `docker-compose.yml` file :
 
 ```
 docker-compose run --rm app

@@ -1,9 +1,13 @@
-import openai
-import os
 import io
-from cgpt.app.plugin import davinci
-from cgpt.app.utils.constant import STR_OPENAI_API_KEY, init_conversation
+import os
+
+import openai
 from dotenv import load_dotenv
+
+from cgpt.app.plugin import davinci
+from cgpt.app.utils.constant import STR_OPENAI_API_KEY
+from cgpt.app.utils.constant import init_conversation
+
 
 load_dotenv()
 

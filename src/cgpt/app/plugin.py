@@ -1,26 +1,16 @@
-# -*- coding: utf-8 -*-
-
 import os
+from typing import Dict
+from typing import List
+from typing import Union
+
 import click
-from termcolor import colored
-from typing import Union, List, Dict
 import openai
-from cgpt.app.create_env import file_prompt
 from dotenv import load_dotenv
-from cgpt.app.utils.constant import (
-    AI_COLON,
-    CHOICES,
-    STR_OPENAI_API_KEY,
-    DAVINCI_MODEL,
-    INCORRECT_API_KEY,
-    MESSAGE,
-    CONTENT,
-    OPENAI_REQUEST_TIMEOUT,
-    NOT_CONNECTED,
-    TOO_MUCH_REQUEST,
-    USER,
-    error_color,
-)
+from termcolor import colored
+
+from cgpt.app.create_env import file_prompt
+from . import *
+
 
 load_dotenv()
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)

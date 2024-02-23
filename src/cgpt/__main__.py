@@ -13,24 +13,24 @@
 
 # -*- coding: utf-8 -*-
 
-import click
 import os
 import subprocess
+
+import click
 from termcolor import colored
-from cgpt.app.main import prompt
+
 from cgpt.app.create_env import file_prompt
-from cgpt.app.utils.constant import (
-    SERVER_PATH,
-    CLIENT_PATH,
-    CGPT_NETWORK,
-    YOU_SERVER,
-    OPEN_TERMINAL,
-    WELCOME,
-    error_color,
-    color,
-    BOLD,
-    PYTHONSTR,
-)
+from cgpt.app.main import prompt
+from cgpt.app.utils.constant import BOLD
+from cgpt.app.utils.constant import CGPT_NETWORK
+from cgpt.app.utils.constant import CLIENT_PATH
+from cgpt.app.utils.constant import OPEN_TERMINAL
+from cgpt.app.utils.constant import PYTHONSTR
+from cgpt.app.utils.constant import SERVER_PATH
+from cgpt.app.utils.constant import WELCOME
+from cgpt.app.utils.constant import YOU_SERVER
+from cgpt.app.utils.constant import color
+from cgpt.app.utils.constant import error_color
 
 
 @click.command()

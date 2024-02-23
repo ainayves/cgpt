@@ -1,21 +1,13 @@
-from typing import List, Dict
-import click
 import socket
+from typing import Dict
+from typing import List
+
+import click
+from termcolor import colored
+
 from cgpt.app.create_env import file_prompt
 from cgpt.app.plugin import davinci
-from cgpt.app.utils.constant import (
-    init_conversation,
-    ASSISTANT,
-    MAX_WIDTH,
-    color,
-    top_left,
-    bottom_left,
-    IA,
-    stick,
-    BLANK,
-    assistant_color,
-)
-from termcolor import colored
+from . import *
 
 
 class Base_CGPT:
