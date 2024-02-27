@@ -42,11 +42,6 @@ def tests(session):
         "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six" , "python-dotenv"
     )
     session.run("pytest")
-    # if os.getenv("TEST_MODE") == "webtest":
-    #     session.run("pytest", "-v", "-m", "webtest")
-    # else:
-    #     session.run("pytest", "-v", "-m", "localtest")
-
 
 @session(name="docs-build", python=python_versions[0])
 def docs_build(session: Session) -> None:
