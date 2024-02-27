@@ -12,6 +12,11 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
 ]
 
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src", "src/cgpt"
+]
+
 [tool.poetry.urls]
 Changelog = "https://github.com/ainayves/cgpt/releases"
 
