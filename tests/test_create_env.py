@@ -10,7 +10,7 @@ from cgpt.app.utils.constant import STR_OPENAI_API_KEY
 file_path = os.path.dirname(os.path.abspath(__file__))
 
 
-@pytest.mark.localtest
+# @pytest.mark.localtest
 def test_file_prompt(monkeypatch):
     # Set up test data
     expected_api_key = "sk-myapikey"

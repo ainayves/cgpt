@@ -42,12 +42,13 @@ def lint(session):
 @nox.session(name="testing", python=python_versions)
 def tests(session):
     session.install(
-        "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six"
+        "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six" , "python-dotenv"
     )
-    if os.getenv("TEST_MODE") == "webtest":
-        session.run("pytest", "-v", "-m", "webtest")
-    else:
-        session.run("pytest", "-v", "-m", "localtest")
+    session.run("pytest")
+    # if os.getenv("TEST_MODE") == "webtest":
+    #     session.run("pytest", "-v", "-m", "webtest")
+    # else:
+    #     session.run("pytest", "-v", "-m", "localtest")
 
 
 @session(name="docs-build", python=python_versions[0])
