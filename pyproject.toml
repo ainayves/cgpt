@@ -17,6 +17,11 @@ pythonpath = [
   ".", "src", "src/cgpt"
 ]
 
+markers = [
+    "webtest",
+    "localtest",
+]
+
 [tool.poetry.urls]
 Changelog = "https://github.com/ainayves/cgpt/releases"
 

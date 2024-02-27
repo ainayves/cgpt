@@ -6,7 +6,9 @@ import sys
 from pathlib import Path
 from textwrap import dedent
 import nox
+from dotenv import load_dotenv
 
+load_dotenv()
 
 try:
     from nox_poetry import Session
@@ -42,7 +44,10 @@ def tests(session):
     session.install(
         "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six"
     )
-    session.run("pytest")
+    if os.getenv("TEST_MODE") == "webtest":
+        session.run("pytest", "-v", "-m", "webtest")
+    else:
+        session.run("pytest", "-v", "-m", "localtest")
 
 
 @session(name="docs-build", python=python_versions[0])

@@ -10,9 +10,7 @@ from cgpt.app.utils.constant import STR_OPENAI_API_KEY
 file_path = os.path.dirname(os.path.abspath(__file__))
 
 
-@pytest.mark.skip(
-    reason="This test Work only on local because, we cannot create .env file on the fly in github workflow"  # noqa: E501
-)
+@pytest.mark.localtest
 def test_file_prompt(monkeypatch):
     # Set up test data
     expected_api_key = "sk-myapikey"
