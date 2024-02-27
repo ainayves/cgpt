@@ -43,6 +43,7 @@ def tests(session):
     )
     session.run("pytest")
 
+
 @session(name="docs-build", python=python_versions[0])
 def docs_build(session: Session) -> None:
     """Build the documentation."""
