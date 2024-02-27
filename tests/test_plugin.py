@@ -19,10 +19,7 @@ def test_correct_openai_api_key():
         ouptut = davinci("bjr", previous_conv=init_conversation)
         assert isinstance(ouptut, str)
     else:
-        # Patch sys.stdin to simulate user input
         pytest.MonkeyPatch.setattr('sys.stdin', "q")
-
-        # Import and call your davinci function here
         output = davinci("bjr", previous_conv=init_conversation)
         assert output is None
 
