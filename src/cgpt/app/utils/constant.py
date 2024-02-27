@@ -80,7 +80,7 @@ CONNECTION_LOST = f"Connection lost {SAD}"
 CONNECTION_IMPOSSIBLE = f"Connection impossible {SAD}"
 DASHED = "----------------------------------------------------------"
 DAVINCI_MODEL = "gpt-3.5-turbo"
-DAVINCI_PROMPT = "The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:"
+DAVINCI_PROMPT = "The following is a conversation with an AI. The AI is helpful, creative, clever, and very friendly.\n\nHuman:"  # noqa: E501
 INCORRECT_API_KEY = (
     "Your API key is incorrect. Type m to modify the key or q to quit > "
 )

@@ -39,7 +39,7 @@ def lint(session):
 @nox.session(name="testing", python=python_versions)
 def tests(session):
     session.install(
-        "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six" , "python-dotenv"
+        "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six"
     )
     session.run("pytest")
 
