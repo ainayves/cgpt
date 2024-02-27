@@ -1,6 +1,5 @@
 import io
 import os
-import getpass
 import pytest
 import openai
 from dotenv import load_dotenv
@@ -20,14 +19,12 @@ def test_correct_openai_api_key():
         ouptut = davinci("bjr", previous_conv=init_conversation)
         assert isinstance(ouptut, str)
     else:
-        def mock_getpass(prompt):
-            return "randomstring"
+        # Patch sys.stdin to simulate user input
+        pytest.MonkeyPatch.setattr('sys.stdin', "q")
 
-        pytest.MonkeyPatch.setattr(getpass, "getpass", mock_getpass)
-
-        ouptut = davinci("bjr", previous_conv=init_conversation)
-        assert ouptut is None
-
+        # Import and call your davinci function here
+        output = davinci("bjr", previous_conv=init_conversation)
+        assert output is None
 
 def test_wrong_openai_key(monkeypatch):
     openai.api_key = "abcd"
