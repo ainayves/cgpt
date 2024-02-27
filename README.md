@@ -11,7 +11,6 @@
 
 - [AI conversation exactly the same as in openai website](#description)
 - [LAN support](#link-cgpt-inside-a-local-network)
-- [Docker support](#whale2-build-and-run-with-docker)
 
 </br>
 
@@ -36,34 +35,6 @@ You can install the latest version from pypi.
 
 ```
 pip install cgpt
-```
-
-### 🖥️ SETUP FOR DEVELOPPERS
-
-```
-pip install -r requirements.txt
-```
-
-### 🔨 BUILD
-
-- For this part , it is better to use Linux.
-
-If you are on Linux , launch:
-
-```
-sudo chmod +x build.sh
-```
-
-Then , :
-
-```
-./build.sh
-```
-
-### ⏯️ VERIFY INSTALLATION
-
-```
-cgpt-version
 ```
 
 ### 🚀 RUN
@@ -92,13 +63,6 @@ NOTES :
 
 - A `client` can also use his own api_key in the next version.
 
-### :whale2: BUILD AND RUN WITH DOCKER
-
-- To make it easier , use the `docker-compose.yml` file :
-
-```
-docker-compose run --rm app
-```
 
 ### 💚 Feedback
 
