@@ -5,7 +5,7 @@ VERSION = "1.2.3"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
 
-WELCOME = rf"""
+WELCOME = f"""
 
   /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
  /$$__  $$ /$$__  $$| $$__  $$|__  $$__/ v{VERSION}
