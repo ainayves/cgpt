@@ -1,8 +1,11 @@
+poetry
 setuptools
 twine
 click
-openai
+openai==0.28
 python-dotenv
 termcolor
 wheel
 pytest
+nox
+nox-poetry

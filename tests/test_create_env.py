@@ -1,11 +1,16 @@
-import getpass, os
-from app.create_env import file_prompt
-from app.utils.constant import STR_OPENAI_API_KEY
+import getpass
+import os
+import pytest
 from pathlib import Path
+
+from cgpt.app.create_env import file_prompt
+from cgpt.app.utils.constant import STR_OPENAI_API_KEY
+
 
 file_path = os.path.dirname(os.path.abspath(__file__))
 
 
+@pytest.mark.skip(reason="Cannot run on remote runners") 
 def test_file_prompt(monkeypatch):
     # Set up test data
     expected_api_key = "sk-myapikey"
@@ -18,7 +23,7 @@ def test_file_prompt(monkeypatch):
 
     file_prompt(file_path)
 
-    assert env_file.is_file() == True
+    assert env_file.is_file() == True  # noqa: E712
     with env_file.open("r") as f:
         env_data = f.read()
     assert f"{STR_OPENAI_API_KEY}={expected_api_key}" in env_data.replace(
