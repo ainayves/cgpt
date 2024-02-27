@@ -18,6 +18,7 @@ def test_file_prompt(monkeypatch):
         return expected_api_key
 
     monkeypatch.setattr(getpass, "getpass", mock_getpass)
+    monkeypatch.setenv(STR_OPENAI_API_KEY, expected_api_key)
 
     file_prompt(file_path)
 
