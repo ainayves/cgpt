@@ -19,6 +19,7 @@ def test_correct_openai_api_key():
         ouptut = davinci("bjr", previous_conv=init_conversation)
         assert isinstance(ouptut, str)
     else:
+        ouptut = davinci("bjr", previous_conv=init_conversation)
         assert ouptut is None
 
 
