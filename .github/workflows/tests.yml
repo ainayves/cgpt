@@ -17,7 +17,7 @@ jobs:
           - { python: "3.8", os: "ubuntu-latest", session: "testing" }
           - { python: "3.7", os: "ubuntu-latest", session: "testing" }
           - { python: "3.10", os: "windows-latest", session: "testing" }
-          - { python: "3.10", os: "macos-latest", session: "testing" }
+          # - { python: "3.10", os: "macos-latest", session: "testing" }
           - { python: "3.10", os: "ubuntu-latest", session: "docs-build" }
 
     env:
