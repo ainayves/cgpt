@@ -15,12 +15,11 @@ load_dotenv()
 def test_correct_openai_api_key():
     openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
-    try:
+    if os.getenv(STR_OPENAI_API_KEY) != "sk-myapikey":
         ouptut = davinci("bjr", previous_conv=init_conversation)
         assert isinstance(ouptut, str)
-
-    except openai.error.AuthenticationError:
-        pass
+    else:
+        assert ouptut is None
 
 
 def test_wrong_openai_key(monkeypatch):
