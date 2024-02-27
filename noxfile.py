@@ -6,9 +6,6 @@ import sys
 from pathlib import Path
 from textwrap import dedent
 import nox
-from dotenv import load_dotenv
-
-load_dotenv()
 
 try:
     from nox_poetry import Session
