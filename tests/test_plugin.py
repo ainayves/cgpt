@@ -19,9 +19,9 @@ def test_correct_openai_api_key():
         ouptut = davinci("bjr", previous_conv=init_conversation)
         assert isinstance(ouptut, str)
     else:
-        pytest.MonkeyPatch.setattr('sys.stdin', "q")
-        output = davinci("bjr", previous_conv=init_conversation)
-        assert output is None
+        pytest.MonkeyPatch.setattr('cgpt.app.createnv.file_prompt', lambda: 'randomstring')
+        ouptut = davinci("bjr", previous_conv=init_conversation)
+        assert isinstance(ouptut, str)
 
 def test_wrong_openai_key(monkeypatch):
     openai.api_key = "abcd"
