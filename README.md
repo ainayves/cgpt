@@ -7,12 +7,12 @@
 <center><h2>🤖 MAKE AI POWERED SEARCH INSIDE YOUR CLI 💻</h2></center>
 </br>
 
-# ⭐ FEATURES
+# Features
 
 - [AI conversation exactly the same as in openai website](#descriptions)
 - [LAN support](#cgpt-inside-a-local-network)
-- [Devbox support](#whale2-run-with-docker)
-- [Docker support](#whale2-run-with-docker)
+- [Docker support](#run-with-docker)
+- [Devbox support](#devbox-support)
 
 </br>
 
@@ -20,12 +20,12 @@
 
 </br>
 
-### DESCRIPTIONS
+## Descriptions
 
 - `cgpt` is a REPL that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
-### :question: PREREQUISITES
+## Prerequisities
 
 - python >=3.7
 - openai API KEY :
@@ -34,21 +34,21 @@
   > This tool is still using `gpt-3.5-turbo` , 
   > `gpt-4` and `gpt-4-turbo` are on the way. 😉
 
-### INSTALL FROM PYPI
+# Setup and Run
 
-You can install the latest version from pypi.
+### 🚀 Run in local
+
+You can directly install the latest version from pypi.
 
 ```
 pip install cgpt
 ```
 
-# 🚀 RUN
-
 ```
-cgpt
+$ cgpt
 ```
 
-### :link: CGPT INSIDE A LOCAL NETWORK
+### CGPT inside a Local Area Network
 
 You can use cgpt inside a LAN.
 
@@ -57,27 +57,28 @@ You can use cgpt inside a LAN.
 
 > For more information , look [here](https://cgpt.readthedocs.io/en/latest/index.html#use-it-inside-a-local-network).
 
-### ⏏️ RUN WITH DEVBOX
 
-For contributors , you need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
-
-Then , run this command in the root directory of the project:
-
-```
-devbox run start
-```
-
-### :whale2: RUN WITH DOCKER 
+### Run with Docker 
 
 Pull the image 
 ```
-# docker pull ainayves/cgpt:latest
+$ docker pull ainayves/cgpt:latest
 ```
 
 Run the docker image by using your openai [api_key](https://platform.openai.com/account/api-keys) :
 
 ```
-# docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
+$ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
+```
+
+# Devbox support
+
+To make life easier for contributors , you can install and use [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/).
+
+Then , run this command in the root directory of the project:
+
+```
+$ devbox run start
 ```
 
 # 💚 Feedback
