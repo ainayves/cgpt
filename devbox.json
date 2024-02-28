@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "python310@latest",
+    "poetry@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "poetry install"
+    ],
+    "scripts": {
+      "start": "poetry run cgpt"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import socket
 from typing import Dict
 from typing import List
-from typing import Optional
 
 import click
 from termcolor import colored

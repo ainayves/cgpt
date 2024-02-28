@@ -9,8 +9,10 @@
 
 ### ⭐ FEATURES
 
-- [AI conversation exactly the same as in openai website](#description)
+- [AI conversation exactly the same as in openai website](#descriptions)
 - [LAN support](#link-cgpt-inside-a-local-network)
+- [Devbox support](#whale2-run-with-docker)
+- [Docker support](#whale2-run-with-docker)
 
 </br>
 
@@ -20,10 +22,10 @@
 
 ### DESCRIPTIONS
 
-- `cgpt` is a Python package that allows you to use AI directly in your favorite Terminal.
+- `cgpt` is a REPL that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
-### :question: REQUIREMENTS
+### :question: PREREQUISITES
 
 - python >=3.7
 - openai API KEY :
@@ -61,7 +63,33 @@ NOTES :
 127.0.1.1	your-hostanme
 ```
 
-- A `client` can also use his own api_key in the next version.
+- A `client` can also use his own api_key on future releases.
+
+- This tool is still using `gpt-3.5-turbo` , `gpt-4` and `gpt-4-turbo` are on the way 😉.
+
+### ⏏️ RUN WITH DEVBOX
+
+You need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
+
+Then , run this command in the root directory :
+
+```
+devbox run start
+```
+
+### :whale2: RUN WITH DOCKER 
+
+Pull the image 
+```
+# docker pull ainayves/cgpt:v1.2.6
+```
+
+Run the docker image by using your openai api key :
+
+```
+# docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
+```
+
 
 
 ### 💚 Feedback
