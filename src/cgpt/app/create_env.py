@@ -4,11 +4,13 @@ import click
 import dotenv
 from termcolor import colored
 
-from cgpt.app.utils.constant import API_KEY_ADDED
-from cgpt.app.utils.constant import API_KEY_NOT_ADDED
-from cgpt.app.utils.constant import GET_API_KEY
-from cgpt.app.utils.constant import STR_OPENAI_API_KEY
-from cgpt.app.utils.constant import color
+from cgpt.app.utils.constant import (
+    API_KEY_ADDED,
+    API_KEY_NOT_ADDED,
+    GET_API_KEY,
+    STR_OPENAI_API_KEY,
+    color,
+)
 
 
 def file_prompt(output_path=None) -> None:
