@@ -9,9 +9,9 @@
 
 ### ⭐ FEATURES
 
-- [AI conversation exactly the same as in openai website](#description)
+- [AI conversation exactly the same as in openai website](#descriptions)
 - [LAN support](#link-cgpt-inside-a-local-network)
-- [Devbox support](#whale2-run-with-devbox)
+- [Devbox support](#whale2-run-with-docker)
 - [Docker support](#whale2-run-with-docker)
 
 </br>
@@ -33,7 +33,7 @@
 
 ### INSTALL FROM PYPI
 
-You can install the latest version from pypi.
+You can install the latest version from pypi ![PyPI](https://img.shields.io/pypi/v/cgpt).
 
 ```
 pip install cgpt
