@@ -52,7 +52,6 @@ jobs:
         run: |
           pipx install --pip-args=--constraint=.github/workflows/constraints.txt poetry
           poetry --version
-          poetry lock
 
       - name: Install Nox
         run: |
