@@ -6,6 +6,7 @@ os_name = platform.system()
 APIKEY_OPTION = "Modify API key."
 VERSION_OPTION = "Show version of cgpt."
 LAN_OPTION = "Use LAN mode, share your connection to AI with people in the network."
+
 WELCOME = f"""
 
     /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
@@ -38,6 +39,7 @@ else:
     LIVE = ""
 
 init_conversation = [{"role": "system", "content": "You are a helpful assistant."}]
+BYE = f"\n Bye ! {SAD}"
 color = "green"
 error_color = "yellow"
 assistant_color = "yellow"
