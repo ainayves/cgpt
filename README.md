@@ -11,7 +11,7 @@
 
 - [AI conversation exactly the same as in openai website](#description)
 - [LAN support](#link-cgpt-inside-a-local-network)
-- [Devbox support](#eject-run-with-devbox)
+- [Devbox support](#⏏️-run-with-devbox)
 - [Docker support](#whale2-run-with-docker)
 
 </br>
