@@ -24,24 +24,24 @@ package = "cgpt"
 python_versions = ["3.10", "3.9", "3.8", "3.7"]
 nox.needs_version = ">= 2021.6.6"
 nox.options.sessions = (
-    # "lint",
-    # "testing",
+    "lint",
+    "testing",
     "docs-build",
 )
 
 
-# @nox.session(name="lint", python=python_versions)
-# def lint(session):
-#     session.install("black")
-#     session.run("black", ".")
+@nox.session(name="lint", python=python_versions)
+def lint(session):
+    session.install("black")
+    session.run("black", ".")
 
 
-# @nox.session(name="testing", python=python_versions)
-# def tests(session):
-#     session.install(
-#         "pytest", "openai==0.28.1", "click", "python-dotenv", "termcolor", "six"
-#     )
-#     session.run("pytest")
+@nox.session(name="testing", python=python_versions)
+def tests(session):
+    session.install(
+        "pytest", "openai==0.28.1", "click", "python-dotenv", "termcolor", "six"
+    )
+    session.run("pytest")
 
 
 @session(name="docs-build", python=python_versions[0])
