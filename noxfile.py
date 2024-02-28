@@ -39,7 +39,7 @@ def lint(session):
 @nox.session(name="testing", python=python_versions)
 def tests(session):
     session.install(
-        "pytest", "openai==0.28", "click", "python-dotenv", "termcolor", "six"
+        "pytest", "openai==0.28.1", "click", "python-dotenv", "termcolor", "six"
     )
     session.run("pytest")
 
@@ -60,7 +60,7 @@ def docs_build(session: Session) -> None:
         "termcolor",
         "click",
         "python-dotenv",
-        "openai==0.28",
+        "openai==0.28.1",
     )
 
     build_dir = Path("docs", "_build")

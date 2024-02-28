@@ -1,7 +1,7 @@
 import platform
 
 
-VERSION = "1.2.4"
+VERSION = "1.2.6"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
 

@@ -61,6 +61,7 @@ coverage.xml
 .pytest_cache/
 cover/
 
+
 # Translations
 *.mo
 *.pot
@@ -134,6 +135,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+venvtest
 ENV/
 env.bak/
 venv.bak/
@@ -172,3 +174,6 @@ cython_debug/
 
 # VSCODE settings
 .vscode/
+
+# Devbox settings
+.devbox
