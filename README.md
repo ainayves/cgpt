@@ -11,8 +11,8 @@
 
 - [AI conversation exactly the same as in openai website](#description)
 - [LAN support](#link-cgpt-inside-a-local-network)
-- [Docker support](#whale2-run-with-docker)
 - [Devbox support](#eject-run-with-devbox)
+- [Docker support](#whale2-run-with-docker)
 
 </br>
 
@@ -67,6 +67,15 @@ NOTES :
 
 - This tool is still using `gpt-3.5-turbo` , `gpt-4` and `gpt-4-turbo` are on the way 😉.
 
+### ⏏️ RUN WITH DEVBOX
+
+You need to install [Nix](https://nix.dev/install-nix.html) and [Devbox](https://www.jetpack.io/devbox) on the first place.
+
+Then , run this command in the root directory :
+
+```
+devbox run start
+```
 
 ### :whale2: RUN WITH DOCKER 
 
@@ -81,15 +90,7 @@ Run the docker image by using your openai api key :
 # docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
 ```
 
-### :eject: RUN WITH DEVBOX
 
-You need to install [Nix](https://nix.dev/install-nix.html) and [Devbox](https://www.jetpack.io/devbox) on the first place.
-
-Then , run this command in the root directory :
-
-```
-devbox run start
-```
 
 ### 💚 Feedback
 
