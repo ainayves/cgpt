@@ -1,37 +1,19 @@
 ![PyPI](https://img.shields.io/pypi/v/cgpt)
-![python](https://img.shields.io/badge/Python-3.7-blue.svg)
-![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
-[![Build Status](https://img.shields.io/badge/Build%20status-Passing-green)](https://github.com/ainayves/cgpt/actions)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-<center><h2>🤖 MAKE AI POWERED SEARCH INSIDE YOUR CLI 💻</h2></center>
-</br>
+# Overview
 
-# ⭐ FEATURES
-
-- [AI conversation exactly the same as in openai website](#descriptions)
-- [LAN support](#cgpt-inside-a-local-network)
-- [Devbox support](#run-with-docker)
-- [Docker support](#run-with-devbox)
-
-</br>
-
-![cgpt](https://i.imgflip.com/8hdiuv.jpg)
-
-</br>
-
-### DESCRIPTIONS
+## Description
 
 - `cgpt` is a REPL that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
-### :question: PREREQUISITES
+##  Prerequisities
 
 - python >=3.7
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### INSTALL FROM PYPI
+##  Install from pypi
 
 You can install the latest version from pypi.
 
@@ -39,15 +21,19 @@ You can install the latest version from pypi.
 pip install cgpt
 ```
 
-# 🚀 RUN
+## Run
+
+We've kept it super simple. Just use the command below, and you're in the conversational loop 🚀.
 
 ```
 cgpt
 ```
+![cgpt](https://i.imgflip.com/8hdiuv.jpg)
 
-### :link: CGPT INSIDE A LOCAL NETWORK
 
-You can use cgpt inside a LAN.
+## Use it inside a local network
+
+You can use cgpt inside a LAN thanks to the command : `cgpt --lan` .
 
 - You just need one Host (`connected to internet`) to be the server.
 - Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`.
@@ -67,17 +53,7 @@ NOTES :
 
 - This tool is still using `gpt-3.5-turbo` , `gpt-4` and `gpt-4-turbo` are on the way 😉.
 
-### ⏏️ RUN WITH DEVBOX
-
-For contributors , you need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
-
-Then , run this command in the root directory of the project:
-
-```
-devbox run start
-```
-
-### :whale2: RUN WITH DOCKER 
+###  Run with docker 
 
 Pull the image 
 ```
@@ -90,8 +66,3 @@ Run the docker image by using your openai api key :
 # docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
 ```
 
-
-
-# 💚 Feedback
-
-Please feel free to leave feedback in issues/PRs.

@@ -7,16 +7,18 @@ from termcolor import colored
 
 from cgpt.app.create_env import file_prompt
 from cgpt.app.plugin import davinci
-from cgpt.app.utils.constant import ASSISTANT
-from cgpt.app.utils.constant import BLANK
-from cgpt.app.utils.constant import IA
-from cgpt.app.utils.constant import MAX_WIDTH
-from cgpt.app.utils.constant import assistant_color
-from cgpt.app.utils.constant import bottom_left
-from cgpt.app.utils.constant import color
-from cgpt.app.utils.constant import init_conversation
-from cgpt.app.utils.constant import stick
-from cgpt.app.utils.constant import top_left
+from cgpt.app.utils.constant import (
+    ASSISTANT,
+    BLANK,
+    IA,
+    MAX_WIDTH,
+    assistant_color,
+    bottom_left,
+    color,
+    init_conversation,
+    stick,
+    top_left,
+)
 
 
 class Base_CGPT:

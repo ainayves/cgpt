@@ -6,16 +6,18 @@ import click
 from termcolor import colored
 
 from cgpt.app.plugin import davinci
-from cgpt.app.utils.constant import DECONNECTED_HOST
-from cgpt.app.utils.constant import LIVE
-from cgpt.app.utils.constant import PING
-from cgpt.app.utils.constant import PONG
-from cgpt.app.utils.constant import PORT
-from cgpt.app.utils.constant import SERVER_LIVE
-from cgpt.app.utils.constant import UTF
-from cgpt.app.utils.constant import color
-from cgpt.app.utils.constant import error_color
-from cgpt.app.utils.constant import init_conversation
+from cgpt.app.utils.constant import (
+    DECONNECTED_HOST,
+    LIVE,
+    PING,
+    PONG,
+    PORT,
+    SERVER_LIVE,
+    UTF,
+    color,
+    error_color,
+    init_conversation,
+)
 
 
 print_lock = threading.Lock()

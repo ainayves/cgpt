@@ -1,6 +1,6 @@
 # License
 
-```{literalinclude} ../LICENSE
+```{include} ../LICENSE
 ---
 language: none
 ---

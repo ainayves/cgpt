@@ -1,4 +1,5 @@
-```{include} ../README.md
+```{include} ../overview.md
+
 ---
 end-before: <!-- github-only -->
 ---
@@ -15,7 +16,6 @@ maxdepth: 1
 ---
 
 usage
-reference
 contributing
 Code of Conduct <codeofconduct>
 License <license>

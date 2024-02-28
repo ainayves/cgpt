@@ -1,21 +1,24 @@
 import platform
 
-
 VERSION = "1.2.7a0"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
-
+APIKEY_OPTION = "Modify API key."
+VERSION_OPTION = "Show version of cgpt."
+LAN_OPTION = "Use LAN mode, share your connection to AI with people in the network."
 WELCOME = f"""
 
-  /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
- /$$__  $$ /$$__  $$| $$__  $$|__  $$__/ v{VERSION}
-| $$  \__/| $$  \__/| $$  \ $$   | $$
-| $$      | $$ /$$$$| $$$$$$$/   | $$
-| $$      | $$|_  $$| $$____/    | $$
-| $$    $$| $$  \ $$| $$         | $$
-|  $$$$$$/|  $$$$$$/| $$         | $$
- \______/  \______/ |__/         |__/ {SUBTITLE}
+    /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
+    /$$__  $$ /$$__  $$| $$__  $$|__  $$__/ v{VERSION}
+    | $$  \__/| $$  \__/| $$  \ $$   | $$
+    | $$      | $$ /$$$$| $$$$$$$/   | $$
+    | $$      | $$|_  $$| $$____/    | $$
+    | $$    $$| $$  \ $$| $$         | $$
+    |  $$$$$$/|  $$$$$$/| $$         | $$
+    \______/  \______/ |__/         |__/ {SUBTITLE}
 
+    
+    q: quit, m: modify api_key
 """
 
 
@@ -66,7 +69,7 @@ STR_OPENAI_API_KEY = "OPENAI_API_KEY"
 SERVER_PATH = "/app/server/main.py"
 CLIENT_PATH = "/app/client/main.py"
 CGPT_NETWORK = "Do you want to use cgpt on networks? "
-YOU_SERVER = f"Are you the server {HAPPY}?"
+YOU_SERVER = f"You are using the LAN mode...\nAre you the server {HAPPY}?"
 OPEN_TERMINAL = f"Please open another terminal..{RELEIVED}"
 SERVER_LIVE = "Server live on "
 GET_API_KEY = "Add your API key (invisible input) > "
@@ -74,7 +77,7 @@ API_KEY_ADDED = (
     "Your API key has been successfully added, please restart the cgpt command."
 )
 API_KEY_NOT_ADDED = "\nYou did not add an API key.\n"
-SAY_SOMETHING = "Say something (q: quit, m: modify api_key) > "
+SAY_SOMETHING = "    Say something > "
 ENTER_SERVER_IP = "Enter the server IP address: "
 CONNECTION_LOST = f"Connection lost {SAD}"
 CONNECTION_IMPOSSIBLE = f"Connection impossible {SAD}"
