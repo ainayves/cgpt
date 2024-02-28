@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cgpt"
-version = "1.2.7"
+version = "1.2.8"
 description = "Cgpt"
 authors = ["Aina Yves <randrianaina.yves@gmail.com>"]
 license = "MIT"
@@ -28,6 +28,9 @@ Changelog = "https://github.com/ainayves/cgpt/releases"
 [tool.poetry.dependencies]
 python = "^3.10"
 click = ">=8.0.1"
+openai = "^0.28"
+python-dotenv = "*"
+termcolor = "*"
 
 [tool.poetry.dev-dependencies]
 Pygments = ">=2.10.0"

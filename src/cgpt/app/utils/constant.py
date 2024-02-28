@@ -1,6 +1,6 @@
 import platform
 
-VERSION = "1.2.7"
+VERSION = "1.2.8"
 SUBTITLE = ">>> Make AI powered search inside your CLI"
 os_name = platform.system()
 APIKEY_OPTION = "Modify API key."
