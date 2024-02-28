@@ -57,5 +57,5 @@ def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
     except openai.error.RateLimitError:
         click.echo(colored(TOO_MUCH_REQUEST, error_color))
         res = None
-        
+
     return res

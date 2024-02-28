@@ -31,7 +31,7 @@
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### ![PyPI](https://img.shields.io/pypi/v/cgpt) INSTALL FROM PYPI
+### INSTALL FROM PYPI
 
 You can install the latest version from pypi.
 
