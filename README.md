@@ -69,9 +69,9 @@ NOTES :
 
 ### ⏏️ RUN WITH DEVBOX
 
-You need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
+For contributors , you need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
 
-Then , run this command in the root directory :
+Then , run this command in the root directory of the project:
 
 ```
 devbox run start
