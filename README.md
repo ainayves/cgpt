@@ -22,18 +22,18 @@
 
 ### DESCRIPTIONS
 
-- `cgpt` is a Python package that allows you to use AI directly in your favorite Terminal.
+- `cgpt` is a REPL that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
-### :question: REQUIREMENTS
+### :question: PREREQUISITES
 
 - python >=3.7
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-### INSTALL FROM PYPI
+### ![PyPI](https://img.shields.io/pypi/v/cgpt) INSTALL FROM PYPI
 
-You can install the latest version from pypi ![PyPI](https://img.shields.io/pypi/v/cgpt).
+You can install the latest version from pypi.
 
 ```
 pip install cgpt
@@ -69,7 +69,7 @@ NOTES :
 
 ### ⏏️ RUN WITH DEVBOX
 
-You need to install [Nix](https://nix.dev/install-nix.html) and [Devbox](https://www.jetpack.io/devbox) on the first place.
+You need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
 
 Then , run this command in the root directory :
 
