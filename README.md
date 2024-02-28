@@ -31,7 +31,7 @@
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-  > This tool is still using `gpt-3.5-turbo` 
+  > This tool is still using `gpt-3.5-turbo` , 
   > `gpt-4` and `gpt-4-turbo` are on the way. 😉
 
 ### INSTALL FROM PYPI
@@ -74,7 +74,7 @@ Pull the image
 # docker pull ainayves/cgpt:latest
 ```
 
-Run the docker image by using your openai api key :
+Run the docker image by using your openai [api_key](https://platform.openai.com/account/api-keys) :
 
 ```
 # docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
