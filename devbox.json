@@ -1,18 +1,14 @@
 {
   "packages": [
     "python310@latest",
-    "poetry@latest",
-    "nox@latest"
+    "poetry@latest"
   ],
   "shell": {
     "init_hook": [
       "poetry install"
     ],
     "scripts": {
-      "start": "poetry run cgpt",
-      "test": [
-        "nox"
-      ]
+      "start": "poetry run cgpt"
     }
   }
 }
