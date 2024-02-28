@@ -73,7 +73,7 @@ GET_API_KEY = "Add your API key (invisible input) > "
 API_KEY_ADDED = (
     "Your API key has been successfully added, please restart the cgpt command."
 )
-API_KEY_NOT_ADDED = "\nYou have not added an API key.\n"
+API_KEY_NOT_ADDED = "\nYou did not add an API key.\n"
 SAY_SOMETHING = "Say something (q: quit, m: modify api_key) > "
 ENTER_SERVER_IP = "Enter the server IP address: "
 CONNECTION_LOST = f"Connection lost {SAD}"
