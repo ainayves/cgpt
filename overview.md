@@ -4,12 +4,12 @@
 
 ## Description
 
-- `cgpt` is a REPL that allows you to use AI directly in your favorite Terminal.
+- `cgpt` is a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) tool that allows you to use AI directly in your favorite Terminal.
 - `cgpt` is based on [CLICK](https://github.com/pallets/click) for creating beautiful command line interfaces in a composable way.
 
 ##  Prerequisities
 
-- python >=3.7
+- python >=3.10
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
@@ -21,7 +21,7 @@
 You can install the latest version from pypi.
 
 ```
-pip install cgpt
+$ pip install cgpt
 ```
 
 ## Run
@@ -29,7 +29,7 @@ pip install cgpt
 We've kept it super simple. Just use the command below, and you're in the conversational loop 🚀.
 
 ```
-cgpt
+$ cgpt
 ```
 ![cgpt](https://i.imgflip.com/8hdiuv.jpg)
 
@@ -38,21 +38,27 @@ cgpt
 
 Pull the image 
 ```
-# docker pull ainayves/cgpt:latest
+$ docker pull ainayves/cgpt:latest
 ```
 
 Run the docker image by using your openai api key :
 
 ```
-# docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
+$ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt
 ```
 
 ### Use it inside a local network
 
-You can use cgpt inside a LAN thanks to the command : `cgpt --lan` .
+You can also use cgpt inside a LAN thanks to the command : `cgpt --lan` .
 
 - You just need one Host (`connected to internet`) to be the server.
-- Other Hosts (`not connected to internet`) can ALWAYS use Chat GPT as `client`.
+- Other Hosts (`not connected to internet`) can ALWAYS use the AI as `client`.
+
+To run the LAN mode in docker :
+
+```
+$ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt:latest poetry run cgpt --lan
+```
 
 #### Note
 
