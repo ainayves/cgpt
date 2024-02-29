@@ -10,7 +10,7 @@
 # Features
 
 - [AI conversation exactly the same as in openai website](#descriptions)
-- [LAN support](#cgpt-inside-a-local-network)
+- [LAN support](#cgpt-inside-a-local-area-network)
 - [Docker support](#run-with-docker)
 - [Devbox support](#devbox-support)
 
