@@ -9,14 +9,14 @@ LAN_OPTION = "Use LAN mode, share your connection to AI with people in the netwo
 
 WELCOME = f"""
 
-    /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
+     /$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$
     /$$__  $$ /$$__  $$| $$__  $$|__  $$__/ v{VERSION}
     | $$  \__/| $$  \__/| $$  \ $$   | $$
     | $$      | $$ /$$$$| $$$$$$$/   | $$
     | $$      | $$|_  $$| $$____/    | $$
     | $$    $$| $$  \ $$| $$         | $$
     |  $$$$$$/|  $$$$$$/| $$         | $$
-    \______/  \______/ |__/         |__/ {SUBTITLE}
+     \______/  \______/ |__/          |__/ {SUBTITLE}
 
     
     q: quit, m: modify api_key
@@ -71,7 +71,7 @@ STR_OPENAI_API_KEY = "OPENAI_API_KEY"
 SERVER_PATH = "/app/server/main.py"
 CLIENT_PATH = "/app/client/main.py"
 CGPT_NETWORK = "Do you want to use cgpt on networks? "
-YOU_SERVER = f"You are using the LAN mode...\nAre you the server {HAPPY}?"
+YOU_SERVER = f"You are using the LAN mode...\nAre you the server {HAPPY} ?"
 OPEN_TERMINAL = f"Please open another terminal..{RELEIVED}"
 SERVER_LIVE = "Server live on "
 GET_API_KEY = "Add your API key (invisible input) > "
