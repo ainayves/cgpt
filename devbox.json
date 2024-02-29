@@ -8,7 +8,9 @@
       "poetry install"
     ],
     "scripts": {
-      "start": "poetry run cgpt"
+      "start": "poetry run cgpt",
+      "lan": "poetry run cgpt --lan",
+      "apikey": "poetry run cgpt --apikey"
     }
   }
 }

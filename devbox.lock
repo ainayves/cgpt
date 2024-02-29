@@ -1,26 +1,6 @@
 {
   "lockfile_version": "1",
   "packages": {
-    "nox@latest": {
-      "last_modified": "2024-02-26T19:46:43Z",
-      "resolved": "github:NixOS/nixpkgs/548a86b335d7ecd8b57ec617781f5e652ab0c38e#nox",
-      "source": "devbox-search",
-      "version": "0.0.6",
-      "systems": {
-        "aarch64-darwin": {
-          "store_path": "/nix/store/sg807386pqy47whq1vq9j35kbn2fj6ys-nox-0.0.6"
-        },
-        "aarch64-linux": {
-          "store_path": "/nix/store/bbgdpkaymd1bzgy8xx8jiacrwcf7h6x3-nox-0.0.6"
-        },
-        "x86_64-darwin": {
-          "store_path": "/nix/store/09xa1zznk78vscf28la8fg187a5y4j3a-nox-0.0.6"
-        },
-        "x86_64-linux": {
-          "store_path": "/nix/store/ma9irmq7fk8nnr7p626am8a6mlwymgbz-nox-0.0.6"
-        }
-      }
-    },
     "poetry@latest": {
       "last_modified": "2024-02-26T19:46:43Z",
       "plugin_version": "0.0.4",

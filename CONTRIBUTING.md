@@ -59,10 +59,22 @@ Devbox is a powerful tool that lets you easily create isolated shells for develo
 
 You need to install [Devbox](https://www.jetpack.io/devbox/docs/installing_devbox/) if you do not have it yet.
 
-Then , run this command in the root directory of the project:
+Then , run this command in the root directory of the project to test the tool :
 
 ```
-devbox run start
+$ devbox run start
+```
+
+Run this to test the LAN mode :
+
+```
+$ devbox run lan
+```
+
+Run this to test api_key modification :
+
+```
+$ devbox run apikey
 ```
 
 [pull request]: https://github.com/ainayves/cgpt/pulls
