@@ -41,7 +41,7 @@
 You can directly install the latest version from pypi.
 
 ```
-pip install cgpt
+$ pip install cgpt
 ```
 
 ```

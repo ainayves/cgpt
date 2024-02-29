@@ -13,7 +13,7 @@
 - openai API KEY :
   You need to register on openai to receive your own api key , here : [api_key](https://platform.openai.com/account/api-keys).
 
-  > This tool is still using `gpt-3.5-turbo` 
+  > This tool is still using `gpt-3.5-turbo` , 
   > `gpt-4` and `gpt-4-turbo` are on the way. 😉
 
 ##  Install from pypi
