@@ -21,6 +21,7 @@ except ImportError:
 
 
 package = "cgpt"
+python_versions = ["3.10", "3.11", "3.12"]
 nox.needs_version = ">= 2021.6.6"
 nox.options.sessions = (
     "lint",
@@ -29,13 +30,13 @@ nox.options.sessions = (
 )
 
 
-@nox.session(name="lint", python="3.10")
+@nox.session(name="lint", python=python_versions)
 def lint(session):
     session.install("black")
     session.run("black", ".")
 
 
-@nox.session(name="testing", python="3.10")
+@nox.session(name="testing", python=python_versions)
 def tests(session):
     session.install(
         "pytest", "openai==0.28.1", "click", "python-dotenv", "termcolor", "six"
@@ -43,7 +44,7 @@ def tests(session):
     session.run("pytest")
 
 
-@session(name="docs-build", python="3.10")
+@session(name="docs-build", python=python_versions[0])
 def docs_build(session: Session) -> None:
     """Build the documentation."""
     args = session.posargs or ["docs", "docs/_build"]
@@ -69,7 +70,7 @@ def docs_build(session: Session) -> None:
     session.run("sphinx-build", *args)
 
 
-@session(python="3.10")
+@session(python=python_versions[0])
 def docs(session: Session) -> None:
     """Build and serve the documentation with live reloading on file changes."""
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]
