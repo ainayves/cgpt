@@ -7,7 +7,10 @@ APIKEY_OPTION = "Modify API key."
 VERSION_OPTION = "Show version of cgpt."
 LAN_OPTION = "Use LAN mode, share your connection to AI with people in the network."
 
-WELCOME = "    " + "\n" +f""" 
+WELCOME = (
+    "    "
+    + "\n"
+    + f""" 
    █████████    █████████  ███████████  ███████████ v{VERSION} by Aina Yves
   ███░░░░░███  ███░░░░░███░░███░░░░░███░█░░░███░░░█
  ███     ░░░  ███     ░░░  ░███    ░███░   ░███  ░ 
@@ -21,6 +24,7 @@ WELCOME = "    " + "\n" +f"""
     
     q: quit, m: modify api_key
 """
+)
 
 if os_name == "Linux" or os_name == "Darwin":
     IA = "🤖"

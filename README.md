@@ -85,6 +85,8 @@ Then , run this command in the root directory of the project:
 ```
 $ devbox run start
 ```
+> # ⚠️ Warning 
+> Development of macOS compatibility for `cgpt` is still ongoing and undergoing enhancements.
 
 # 💚 Feedback
 

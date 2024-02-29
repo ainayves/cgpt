@@ -68,3 +68,6 @@ $ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt:latest poetry ru
 > 127.0.1.1	your-hostanme
 > ```
 > A `client` can also use his own api_key on future releases.
+
+> # ⚠️ Warning 
+> Development of macOS compatibility for `cgpt` is still ongoing and undergoing enhancements.
