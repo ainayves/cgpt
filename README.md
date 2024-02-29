@@ -16,7 +16,7 @@
 
 </br>
 
-![cgpt](https://i.imgflip.com/8hdiuv.jpg)
+![cgpt](https://i.imgflip.com/8hfzvl.jpg)
 
 </br>
 

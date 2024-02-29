@@ -31,7 +31,7 @@ We've kept it super simple. Just use the command below, and you're in the conver
 ```
 $ cgpt
 ```
-![cgpt](https://i.imgflip.com/8hdiuv.jpg)
+![cgpt](https://i.imgflip.com/8hfzvl.jpg)
 
 
 ###  Run with docker 
