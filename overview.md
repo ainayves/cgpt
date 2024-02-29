@@ -31,7 +31,7 @@ We've kept it super simple. Just use the command below, and you're in the conver
 ```
 $ cgpt
 ```
-![cgpt](https://i.imgflip.com/8hfzvl.jpg)
+![cgpt](https://i.imgflip.com/8hg7fs.jpg)
 
 
 ###  Run with docker 
@@ -69,5 +69,5 @@ $ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt:latest poetry ru
 > ```
 > A `client` can also use his own api_key on future releases.
 
-> # ⚠️ Warning 
-> Development of macOS compatibility for `cgpt` is still ongoing and undergoing enhancements.
+> # ⚠️ Warning for users only 
+> Development of MacOS compatibility for `cgpt` is still ongoing and undergoing enhancements.

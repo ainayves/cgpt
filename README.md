@@ -16,7 +16,7 @@
 
 </br>
 
-![cgpt](https://i.imgflip.com/8hfzvl.jpg)
+![cgpt](https://i.imgflip.com/8hg7fs.jpg)
 
 </br>
 
@@ -85,8 +85,8 @@ Then , run this command in the root directory of the project:
 ```
 $ devbox run start
 ```
-> # ⚠️ Warning 
-> Development of macOS compatibility for `cgpt` is still ongoing and undergoing enhancements.
+> # ⚠️ Warning for users only
+> Development of MacOS compatibility for `cgpt` is still ongoing and undergoing enhancements.
 
 # 💚 Feedback
 

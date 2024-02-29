@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cgpt"
-version = "1.2.10b0"
+version = "1.2.10rc0"
 description = "Cgpt"
 authors = ["Aina Yves <randrianaina.yves@gmail.com>"]
 license = "MIT"
