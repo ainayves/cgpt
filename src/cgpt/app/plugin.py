@@ -30,12 +30,12 @@ from cgpt.app.utils.constant import (
 load_dotenv()
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
+
 def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
-    
     if os.getenv(MODEL) == None:
         model_choice = DAVINCI_MODEL
     else:
-        model_choice = os.getenv(MODEL) 
+        model_choice = os.getenv(MODEL)
     try:
         previous_conv.append({"role": USER, "content": what})
         response = openai.ChatCompletion.create(

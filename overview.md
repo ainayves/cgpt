@@ -62,7 +62,7 @@ $ docker run -e OPENAI_API_KEY="yourapikey" -i -t ainayves/cgpt:latest poetry ru
 
 #### Note
 
-> For now, the server must be launched inside a `Linux` computer. If the server is running on `Windows`, the address may sometimes be > incorrect (to be fixed in the next version). Additionally, ensure that your `/etc/hosts` file is configured correctly as follows :
+> For now, the server must be launched inside a `Linux` computer. If the server is running on `Windows`, the address may sometimes be incorrect (to be fixed in the next version). Additionally, ensure that your `/etc/hosts` file is configured correctly as follows :
 > ```
 > 127.0.0.1	localhost
 > 127.0.1.1	your-hostanme
