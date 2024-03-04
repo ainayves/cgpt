@@ -13,7 +13,8 @@
       "patch": "poetry version patch --next-phase",
       "start": "poetry run cgpt",
       "lan": "poetry run cgpt --lan",
-      "apikey": "poetry run cgpt --apikey"
+      "apikey": "poetry run cgpt --apikey",
+      "model": "poetry run cgpt --model"
     }
   }
 }

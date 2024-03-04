@@ -20,6 +20,8 @@ from cgpt.app.utils.constant import (
     OPENAI_REQUEST_TIMEOUT,
     STR_OPENAI_API_KEY,
     TOO_MUCH_REQUEST,
+    MODEL,
+    MODEL_ERROR,
     USER,
     error_color,
 )
@@ -28,12 +30,16 @@ from cgpt.app.utils.constant import (
 load_dotenv()
 openai.api_key = os.getenv(STR_OPENAI_API_KEY)
 
-
 def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
+    
+    if os.getenv(MODEL) == None:
+        model_choice = DAVINCI_MODEL
+    else:
+        model_choice = os.getenv(MODEL) 
     try:
         previous_conv.append({"role": USER, "content": what})
         response = openai.ChatCompletion.create(
-            model=DAVINCI_MODEL, messages=previous_conv
+            model=model_choice, messages=previous_conv
         )
 
         res = response[CHOICES][0][MESSAGE][CONTENT].replace(AI_COLON, "")
@@ -60,4 +66,7 @@ def davinci(what: str, previous_conv: List[Dict]) -> Union[str, None]:
         click.echo(colored(TOO_MUCH_REQUEST, error_color))
         res = None
 
+    except openai.error.InvalidRequestError:
+        click.echo(colored(MODEL_ERROR, error_color))
+        res = None
     return res

@@ -31,6 +31,7 @@ click = ">=8.0.1"
 openai = "^0.28"
 python-dotenv = "*"
 termcolor = "*"
+simple-term-menu = "*"
 
 [tool.poetry.dev-dependencies]
 Pygments = ">=2.10.0"
@@ -49,6 +50,7 @@ python-dotenv = "*"
 termcolor = "*"
 xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
+simple-term-menu = "*"
 
 [tool.poetry.scripts]
 cgpt = "cgpt.__main__:cgpt"

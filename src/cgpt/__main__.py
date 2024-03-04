@@ -3,6 +3,9 @@ import subprocess
 
 import click
 from termcolor import colored
+from simple_term_menu import TerminalMenu
+import dotenv
+
 
 from cgpt.app.create_env import file_prompt
 from cgpt.app.main import prompt
@@ -19,8 +22,14 @@ from cgpt.app.utils.constant import (
     APIKEY_OPTION,
     VERSION_OPTION,
     LAN_OPTION,
+    MODEL,
+    MODEL_USED,
+    MODELS_LIST,
+    CHOOSE_OTHERS,
+    CHOOSE_MODEL,
+    YOU_SELECTED,
     color,
-    error_color,
+    error_color
 )
 
 
@@ -33,7 +42,8 @@ from cgpt.app.utils.constant import (
     is_flag=True,
     help=LAN_OPTION,
 )
-def cgpt(version, apikey, lan):
+@click.option("--model", "-m", is_flag=True, help=CHOOSE_MODEL)
+def cgpt(version, apikey, lan, model):
     try:
         if version:
             click.echo(f"cgpt v{VERSION}")
@@ -41,6 +51,19 @@ def cgpt(version, apikey, lan):
             click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
             file_prompt()
 
+        elif model:
+                click.echo(colored(MODEL_USED + os.getenv(MODEL), color=color, attrs=[BOLD]))
+                click.echo(colored(CHOOSE_OTHERS, color=color, attrs=[BOLD]))
+                options = MODELS_LIST
+                terminal_menu = TerminalMenu(options)
+                menu_entry_index = terminal_menu.show()
+
+                if menu_entry_index:
+                    dotenv.set_key(".env", MODEL, options[menu_entry_index])
+                    click.echo(colored(YOU_SELECTED + options[menu_entry_index] + " ✨", error_color))
+
+                else:
+                    pass
         elif lan:
             click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
 
@@ -55,6 +78,7 @@ def cgpt(version, apikey, lan):
                 subprocess.run([PYTHONSTR, cgpt_path + CLIENT_PATH])
 
         else:
+
             click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
 
             if not os.path.isfile(".env"):
