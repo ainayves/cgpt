@@ -54,7 +54,7 @@ def cgpt(version, apikey, lan, model):
             file_prompt()
 
         elif model:
-            if os.getenv(MODEL) == "":
+            if os.getenv(MODEL) == None or os.getenv(MODEL) == "":
                 click.echo(
                     colored(
                         "No model selected, choose one", color=error_color, attrs=[BOLD]
