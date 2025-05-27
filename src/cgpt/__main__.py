@@ -27,40 +27,35 @@ from cgpt.app.utils.constant import (
 @click.command()
 @click.option("--apikey", "-a", is_flag=True, help=APIKEY_OPTION)
 @click.option("--version", "-v", is_flag=True, help=VERSION_OPTION)
-@click.option(
-    "--lan",
-    "-l",
-    is_flag=True,
-    help=LAN_OPTION,
-)
+@click.option("--lan", "-l", is_flag=True, help=LAN_OPTION)
 def cgpt(version, apikey, lan):
     try:
         if version:
             click.echo(f"cgpt v{VERSION}")
-        elif apikey:
-            click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
+            return
+
+        click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
+
+        if apikey:
             file_prompt()
+            return
 
-        elif lan:
-            click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
-
+        if lan:
             cgpt_path = os.path.abspath(os.path.dirname(__file__))
             endpoint = click.confirm(colored(YOU_SERVER, error_color))
 
             if endpoint:
                 click.echo(colored(OPEN_TERMINAL, error_color))
-                subprocess.run([PYTHONSTR, cgpt_path + SERVER_PATH])
-
+                subprocess.run([PYTHONSTR, os.path.join(cgpt_path, SERVER_PATH)])
             else:
-                subprocess.run([PYTHONSTR, cgpt_path + CLIENT_PATH])
+                subprocess.run([PYTHONSTR, os.path.join(cgpt_path, CLIENT_PATH)])
+            return
 
+        # Default behavior
+        if not os.path.isfile(".env"):
+            file_prompt()
         else:
-            click.echo(colored(WELCOME, color=color, attrs=[BOLD]))
-
-            if not os.path.isfile(".env"):
-                file_prompt()
-            else:
-                prompt()
+            prompt()
 
     except click.exceptions.Abort:
         click.echo(BYE)
