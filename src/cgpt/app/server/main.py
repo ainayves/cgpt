@@ -1,6 +1,5 @@
 import socket
 import threading
-from _thread import *  # noqa: F403
 
 import click
 from termcolor import colored
@@ -19,47 +18,47 @@ from cgpt.app.utils.constant import (
     init_conversation,
 )
 
-
 print_lock = threading.Lock()
 
 
-def threaded(c) -> None:
-    init_conversation_client = init_conversation
+def handle_client(client_socket: socket.socket) -> None:
+    conversation_context = init_conversation
+
     while True:
         try:
-            client_data = c.recv(1024).decode()
+            data = client_socket.recv(1024).decode(UTF)
 
-            if client_data == PING:
-                c.send(PONG.encode(encoding=UTF))
+            if not data:
+                break
 
-            api_response = davinci(client_data, init_conversation_client)
-            if api_response is not None:
-                c.send(api_response.encode(encoding=UTF))
-            else:
+            if data == PING:
+                client_socket.send(PONG.encode(UTF))
                 continue
 
-        except BrokenPipeError:
-            continue
+            response = davinci(data, conversation_context)
+            if response is not None:
+                client_socket.send(response.encode(UTF))
 
-        except ConnectionResetError:
+        except (BrokenPipeError, ConnectionResetError):
             click.echo(colored(DECONNECTED_HOST, error_color))
+            break
+
+    client_socket.close()
 
 
-def main(port: int, ip_address=None) -> None:
-    if ip_address is None:
-        auto_detcted_ip = socket.gethostbyname(socket.gethostname())
-        server_socket = socket.create_server((auto_detcted_ip, port), reuse_port=False)
-        server_socket.listen()
-        click.echo(colored(f"{SERVER_LIVE} {auto_detcted_ip} ..{LIVE}", color))
+def start_server(port: int, ip_address: str = None) -> None:
+    host = ip_address or socket.gethostbyname(socket.gethostname())
+    server_socket = socket.create_server((host, port), reuse_port=False)
+    server_socket.listen()
 
-    else:
-        server_socket = socket.create_server((ip_address, int(port)), reuse_port=False)
-        server_socket.listen()
+    click.echo(colored(f"{SERVER_LIVE} {host} ..{LIVE}", color))
 
     while True:
-        client, _ = server_socket.accept()
-        threading.Thread(target=threaded, args=(client,), daemon=True).start()
+        client_socket, _ = server_socket.accept()
+        threading.Thread(
+            target=handle_client, args=(client_socket,), daemon=True
+        ).start()
 
 
 if __name__ == "__main__":
-    main(PORT, None)
+    start_server(PORT)
