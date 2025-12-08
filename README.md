@@ -1,4 +1,4 @@
-#⚠️ WARNING : THIS PROJECT IS CURRENTLY UNDERGOING MAINTENANCE
+# WARNING : THIS PROJECT IS CURRENTLY UNDERGOING MAINTENANCE ⚠️
 ![PyPI](https://img.shields.io/pypi/v/cgpt)
 ![python](https://img.shields.io/badge/Python-3.10-blue.svg)
 ![commit activity](https://img.shields.io/github/commit-activity/m/ainayves/cgpt?color=blue)
